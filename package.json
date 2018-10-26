@@ -5,20 +5,31 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
+    "test:update-snaps": "jest --updateSnapshot",
     "ios": "react-native run-ios",
-    "android": "react-native run-android"
+    "android": "react-native run-android",
+    "lint": "eslint /src",
+    "validate": "npm run lint && npm run test"
   },
   "dependencies": {
+    "color": "^3.1.0",
+    "core-js": "^2.5.7",
+    "firebase": "^5.5.4",
     "native-base": "^2.8.1",
     "react": "^16.5.2",
     "react-native": "^0.57.3",
+    "react-native-root-modal": "^3.1.1",
     "react-navigation": "^2.18.0",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
+    "babel-preset-react-native": "^4.0.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-babel": "^5.2.1",
@@ -29,11 +40,19 @@
     "eslint-plugin-jsx-max-len": "^1.0.0",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-unicorn": "^6.0.1",
+    "firebase-mock": "^2.2.10",
     "jest": "23.6.0",
-    "metro-react-native-babel-preset": "0.48.1",
-    "react-test-renderer": "16.6.0-alpha.8af6728"
+    "metro-react-native-babel-preset": "^0.48.1",
+    "react-dom": "^16.5.2",
+    "react-test-renderer": "16.6.0-alpha.8af6728",
+    "reactotron-react-native": "^2.1.0",
+    "reactotron-redux": "^2.1.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "transformIgnorePatterns": []
   }
 }
