@@ -1,20 +1,33 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Welcome to the UAConnect mobile app
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
 1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+  - Install NPM (node package manager)
+  - Install the react native cli
+    - `sudo npm install -g react-native-cli`
+  - Please follow the link below to install android studio and the required APIs
+    [React Native Android Installation](https://facebook.github.io/react-native/docs/getting-started.html)
+  - Watchman would be nice to have, but don't worry about it
+    - Watchman will watch files and make sure files are compatible, but probably not gonna be an issue for a small project
+  - Install your favorite emulator from the AVD manager (tutorial in [React Native Android Installation] above)
+  - run `npm install` to install packages into the project's node_modules folder
+  - finally, run `npm run android` to run the project (make sure you have your AVD running first)
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+1. Buidling
+  - The project is built after running `npm install` and `npm run android`
+  - After you make code changes, press `ctrl + m` to bring up the developer menu
+    - Here, you can reload the app, debug using the javascript console, etc
+2. Testing
+  - To run all unit tests in the project, run `npm run test`
+  - If you change a component's view, make sure to run all the tests to make sure you made the right changes
+   - If so, run `npm run test:update` to update the snapshots for all components
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# PR Guide
+1. Commit regularly into logical portions so that it is easy to revert if necessary
+2. Write unit tests for any components you make, even commmon components
+3. Make sure to run `npm run validate` when you are done making changes
+4. Push your changes and create a PR
+ - Make sure to give a good description of what you've added/changes/fixed
+ 
