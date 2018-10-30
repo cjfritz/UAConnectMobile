@@ -1,1069 +1,250 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<LoginScreen /> renders correctly initially 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <LoginScreen />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <LoadingModal
-          loadingLabel="Logging in..."
-        />,
-        <Component
-          resizeMode="contain"
-          source={
-            Object {
-              "testUri": "../../../src/assets/images/ua_logo.png",
-            }
+exports[`<LoginScreen /> renders with complete email and password fields 1`] = `
+<Styled(Container)
+  style={
+    Object {
+      "alignContent": "center",
+      "backgroundColor": "#67141A",
+      "flex": 1,
+    }
+  }
+>
+  <LoadingModal
+    loadingLabel="Logging in..."
+    visible={false}
+  />
+  <Component
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../src/assets/images/ua_logo.png",
+      }
+    }
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 0.4,
+        "marginTop": "20%",
+      }
+    }
+  />
+  <Component
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <Styled(Form)>
+      <Styled(Item)
+        floatingLabel={true}
+        style={
+          Object {
+            "marginLeft": "5%",
+            "marginRight": "5%",
           }
+        }
+      >
+        <Styled(Label)
           style={
             Object {
-              "alignSelf": "center",
-              "flex": 0.4,
-              "marginTop": "20%",
-            }
-          }
-        />,
-        <Component
-          style={
-            Object {
-              "backgroundColor": "transparent",
+              "color": "white",
             }
           }
         >
-          <Styled(Form)>
-            <Styled(Item)
-              floatingLabel={true}
-              style={
-                Object {
-                  "marginLeft": "5%",
-                  "marginRight": "5%",
-                }
-              }
-            >
-              <Styled(Label)
-                style={
-                  Object {
-                    "color": "white",
-                  }
-                }
-              >
-                Email
-              </Styled(Label)>
-              <Styled(Input)
-                onChangeText={[Function]}
-                style={
-                  Object {
-                    "color": "white",
-                  }
-                }
-              />
-            </Styled(Item)>
-          </Styled(Form)>
-          <Styled(Form)>
-            <Styled(Item)
-              floatingLabel={true}
-              style={
-                Object {
-                  "marginLeft": "5%",
-                  "marginRight": "5%",
-                }
-              }
-            >
-              <Styled(Label)
-                style={
-                  Object {
-                    "color": "white",
-                  }
-                }
-              >
-                Password
-              </Styled(Label)>
-              <Styled(Input)
-                onChangeText={[Function]}
-                secureTextEntry={true}
-                style={
-                  Object {
-                    "color": "white",
-                  }
-                }
-              />
-            </Styled(Item)>
-          </Styled(Form)>
-          <Styled(Button)
-            block={true}
-            onPress={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "white",
-                "justifyContent": "center",
-                "marginLeft": "5%",
-                "marginRight": "5%",
-                "marginTop": "5%",
-              }
+          Email
+        </Styled(Label)>
+        <Styled(Input)
+          onChangeText={[Function]}
+          style={
+            Object {
+              "color": "white",
             }
-          >
-            <Styled(H1)
-              style={
-                Object {
-                  "color": "black",
-                  "fontSize": 20,
-                }
-              }
-            >
-              Sign In
-            </Styled(H1)>
-          </Styled(Button)>
-        </Component>,
-      ],
-      "style": Object {
-        "alignContent": "center",
-        "backgroundColor": "#67141A",
-        "flex": 1,
-      },
-      "virtual": undefined,
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "loadingLabel": "Logging in...",
-          "visible": undefined,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "resizeMode": "contain",
-          "source": Object {
-            "testUri": "../../../src/assets/images/ua_logo.png",
-          },
-          "style": Object {
-            "alignSelf": "center",
-            "flex": 0.4,
-            "marginTop": "20%",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": Array [
-            <Styled(Form)>
-              <Styled(Item)
-                floatingLabel={true}
-                style={
-                  Object {
-                    "marginLeft": "5%",
-                    "marginRight": "5%",
-                  }
-                }
-              >
-                <Styled(Label)
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                >
-                  Email
-                </Styled(Label)>
-                <Styled(Input)
-                  onChangeText={[Function]}
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                />
-              </Styled(Item)>
-            </Styled(Form)>,
-            <Styled(Form)>
-              <Styled(Item)
-                floatingLabel={true}
-                style={
-                  Object {
-                    "marginLeft": "5%",
-                    "marginRight": "5%",
-                  }
-                }
-              >
-                <Styled(Label)
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                >
-                  Password
-                </Styled(Label)>
-                <Styled(Input)
-                  onChangeText={[Function]}
-                  secureTextEntry={true}
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                />
-              </Styled(Item)>
-            </Styled(Form)>,
-            <Styled(Button)
-              block={true}
-              onPress={[Function]}
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "white",
-                  "justifyContent": "center",
-                  "marginLeft": "5%",
-                  "marginRight": "5%",
-                  "marginTop": "5%",
-                }
-              }
-            >
-              <Styled(H1)
-                style={
-                  Object {
-                    "color": "black",
-                    "fontSize": 20,
-                  }
-                }
-              >
-                Sign In
-              </Styled(H1)>
-            </Styled(Button)>,
-          ],
-          "style": Object {
-            "backgroundColor": "transparent",
-          },
-        },
-        "ref": null,
-        "rendered": Array [
+          }
+          value="test@test.com"
+        />
+      </Styled(Item)>
+    </Styled(Form)>
+    <Styled(Form)>
+      <Styled(Item)
+        floatingLabel={true}
+        style={
           Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": <Styled(Item)
-                floatingLabel={true}
-                style={
-                  Object {
-                    "marginLeft": "5%",
-                    "marginRight": "5%",
-                  }
-                }
-              >
-                <Styled(Label)
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                >
-                  Email
-                </Styled(Label)>
-                <Styled(Input)
-                  onChangeText={[Function]}
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                />
-              </Styled(Item)>,
-              "virtual": undefined,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": Array [
-                  <Styled(Label)
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  >
-                    Email
-                  </Styled(Label)>,
-                  <Styled(Input)
-                    onChangeText={[Function]}
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  />,
-                ],
-                "floatingLabel": true,
-                "style": Object {
-                  "marginLeft": "5%",
-                  "marginRight": "5%",
-                },
-                "virtual": undefined,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Email",
-                    "style": Object {
-                      "color": "white",
-                    },
-                    "virtual": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Email",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "onChangeText": [Function],
-                    "style": Object {
-                      "color": "white",
-                    },
-                    "value": undefined,
-                    "virtual": undefined,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
-              "type": [Function],
-            },
-            "type": [Function],
-          },
+            "marginLeft": "5%",
+            "marginRight": "5%",
+          }
+        }
+      >
+        <Styled(Label)
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Password
+        </Styled(Label)>
+        <Styled(Input)
+          onChangeText={[Function]}
+          secureTextEntry={true}
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+          value="password"
+        />
+      </Styled(Item)>
+    </Styled(Form)>
+    <Styled(Button)
+      block={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "justifyContent": "center",
+          "marginLeft": "5%",
+          "marginRight": "5%",
+          "marginTop": "5%",
+        }
+      }
+    >
+      <Styled(H1)
+        style={
           Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": <Styled(Item)
-                floatingLabel={true}
-                style={
-                  Object {
-                    "marginLeft": "5%",
-                    "marginRight": "5%",
-                  }
-                }
-              >
-                <Styled(Label)
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                >
-                  Password
-                </Styled(Label)>
-                <Styled(Input)
-                  onChangeText={[Function]}
-                  secureTextEntry={true}
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                />
-              </Styled(Item)>,
-              "virtual": undefined,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": Array [
-                  <Styled(Label)
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  >
-                    Password
-                  </Styled(Label)>,
-                  <Styled(Input)
-                    onChangeText={[Function]}
-                    secureTextEntry={true}
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  />,
-                ],
-                "floatingLabel": true,
-                "style": Object {
-                  "marginLeft": "5%",
-                  "marginRight": "5%",
-                },
-                "virtual": undefined,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Password",
-                    "style": Object {
-                      "color": "white",
-                    },
-                    "virtual": undefined,
-                  },
-                  "ref": null,
-                  "rendered": "Password",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "onChangeText": [Function],
-                    "secureTextEntry": true,
-                    "style": Object {
-                      "color": "white",
-                    },
-                    "value": undefined,
-                    "virtual": undefined,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "block": true,
-              "children": <Styled(H1)
-                style={
-                  Object {
-                    "color": "black",
-                    "fontSize": 20,
-                  }
-                }
-              >
-                Sign In
-              </Styled(H1)>,
-              "onPress": [Function],
-              "style": Object {
-                "alignItems": "center",
-                "backgroundColor": "white",
-                "justifyContent": "center",
-                "marginLeft": "5%",
-                "marginRight": "5%",
-                "marginTop": "5%",
-              },
-              "virtual": undefined,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": "Sign In",
-                "style": Object {
-                  "color": "black",
-                  "fontSize": 20,
-                },
-                "virtual": undefined,
-              },
-              "ref": null,
-              "rendered": "Sign In",
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
+            "color": "black",
+            "fontSize": 20,
+          }
+        }
+      >
+        Sign In
+      </Styled(H1)>
+    </Styled(Button)>
+  </Component>
+</Styled(Container)>
+`;
+
+exports[`<LoginScreen /> renders with default props 1`] = `
+<Styled(Container)
+  style={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <LoadingModal
-            loadingLabel="Logging in..."
-          />,
-          <Component
-            resizeMode="contain"
-            source={
-              Object {
-                "testUri": "../../../src/assets/images/ua_logo.png",
-              }
-            }
-            style={
-              Object {
-                "alignSelf": "center",
-                "flex": 0.4,
-                "marginTop": "20%",
-              }
-            }
-          />,
-          <Component
-            style={
-              Object {
-                "backgroundColor": "transparent",
-              }
-            }
-          >
-            <Styled(Form)>
-              <Styled(Item)
-                floatingLabel={true}
-                style={
-                  Object {
-                    "marginLeft": "5%",
-                    "marginRight": "5%",
-                  }
-                }
-              >
-                <Styled(Label)
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                >
-                  Email
-                </Styled(Label)>
-                <Styled(Input)
-                  onChangeText={[Function]}
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                />
-              </Styled(Item)>
-            </Styled(Form)>
-            <Styled(Form)>
-              <Styled(Item)
-                floatingLabel={true}
-                style={
-                  Object {
-                    "marginLeft": "5%",
-                    "marginRight": "5%",
-                  }
-                }
-              >
-                <Styled(Label)
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                >
-                  Password
-                </Styled(Label)>
-                <Styled(Input)
-                  onChangeText={[Function]}
-                  secureTextEntry={true}
-                  style={
-                    Object {
-                      "color": "white",
-                    }
-                  }
-                />
-              </Styled(Item)>
-            </Styled(Form)>
-            <Styled(Button)
-              block={true}
-              onPress={[Function]}
-              style={
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "white",
-                  "justifyContent": "center",
-                  "marginLeft": "5%",
-                  "marginRight": "5%",
-                  "marginTop": "5%",
-                }
-              }
-            >
-              <Styled(H1)
-                style={
-                  Object {
-                    "color": "black",
-                    "fontSize": 20,
-                  }
-                }
-              >
-                Sign In
-              </Styled(H1)>
-            </Styled(Button)>
-          </Component>,
-        ],
-        "style": Object {
-          "alignContent": "center",
-          "backgroundColor": "#67141A",
-          "flex": 1,
-        },
-        "virtual": undefined,
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "loadingLabel": "Logging in...",
-            "visible": undefined,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "resizeMode": "contain",
-            "source": Object {
-              "testUri": "../../../src/assets/images/ua_logo.png",
-            },
-            "style": Object {
-              "alignSelf": "center",
-              "flex": 0.4,
-              "marginTop": "20%",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": Array [
-              <Styled(Form)>
-                <Styled(Item)
-                  floatingLabel={true}
-                  style={
-                    Object {
-                      "marginLeft": "5%",
-                      "marginRight": "5%",
-                    }
-                  }
-                >
-                  <Styled(Label)
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  >
-                    Email
-                  </Styled(Label)>
-                  <Styled(Input)
-                    onChangeText={[Function]}
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  />
-                </Styled(Item)>
-              </Styled(Form)>,
-              <Styled(Form)>
-                <Styled(Item)
-                  floatingLabel={true}
-                  style={
-                    Object {
-                      "marginLeft": "5%",
-                      "marginRight": "5%",
-                    }
-                  }
-                >
-                  <Styled(Label)
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  >
-                    Password
-                  </Styled(Label)>
-                  <Styled(Input)
-                    onChangeText={[Function]}
-                    secureTextEntry={true}
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  />
-                </Styled(Item)>
-              </Styled(Form)>,
-              <Styled(Button)
-                block={true}
-                onPress={[Function]}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "white",
-                    "justifyContent": "center",
-                    "marginLeft": "5%",
-                    "marginRight": "5%",
-                    "marginTop": "5%",
-                  }
-                }
-              >
-                <Styled(H1)
-                  style={
-                    Object {
-                      "color": "black",
-                      "fontSize": 20,
-                    }
-                  }
-                >
-                  Sign In
-                </Styled(H1)>
-              </Styled(Button)>,
-            ],
-            "style": Object {
-              "backgroundColor": "transparent",
-            },
-          },
-          "ref": null,
-          "rendered": Array [
+      "alignContent": "center",
+      "backgroundColor": "#67141A",
+      "flex": 1,
+    }
+  }
+>
+  <LoadingModal
+    loadingLabel="Logging in..."
+  />
+  <Component
+    resizeMode="contain"
+    source={
+      Object {
+        "testUri": "../../../src/assets/images/ua_logo.png",
+      }
+    }
+    style={
+      Object {
+        "alignSelf": "center",
+        "flex": 0.4,
+        "marginTop": "20%",
+      }
+    }
+  />
+  <Component
+    style={
+      Object {
+        "backgroundColor": "transparent",
+      }
+    }
+  >
+    <Styled(Form)>
+      <Styled(Item)
+        floatingLabel={true}
+        style={
+          Object {
+            "marginLeft": "5%",
+            "marginRight": "5%",
+          }
+        }
+      >
+        <Styled(Label)
+          style={
             Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": <Styled(Item)
-                  floatingLabel={true}
-                  style={
-                    Object {
-                      "marginLeft": "5%",
-                      "marginRight": "5%",
-                    }
-                  }
-                >
-                  <Styled(Label)
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  >
-                    Email
-                  </Styled(Label)>
-                  <Styled(Input)
-                    onChangeText={[Function]}
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  />
-                </Styled(Item)>,
-                "virtual": undefined,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    <Styled(Label)
-                      style={
-                        Object {
-                          "color": "white",
-                        }
-                      }
-                    >
-                      Email
-                    </Styled(Label)>,
-                    <Styled(Input)
-                      onChangeText={[Function]}
-                      style={
-                        Object {
-                          "color": "white",
-                        }
-                      }
-                    />,
-                  ],
-                  "floatingLabel": true,
-                  "style": Object {
-                    "marginLeft": "5%",
-                    "marginRight": "5%",
-                  },
-                  "virtual": undefined,
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "Email",
-                      "style": Object {
-                        "color": "white",
-                      },
-                      "virtual": undefined,
-                    },
-                    "ref": null,
-                    "rendered": "Email",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "onChangeText": [Function],
-                      "style": Object {
-                        "color": "white",
-                      },
-                      "value": undefined,
-                      "virtual": undefined,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
-              "type": [Function],
-            },
+              "color": "white",
+            }
+          }
+        >
+          Email
+        </Styled(Label)>
+        <Styled(Input)
+          onChangeText={[Function]}
+          style={
             Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "children": <Styled(Item)
-                  floatingLabel={true}
-                  style={
-                    Object {
-                      "marginLeft": "5%",
-                      "marginRight": "5%",
-                    }
-                  }
-                >
-                  <Styled(Label)
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  >
-                    Password
-                  </Styled(Label)>
-                  <Styled(Input)
-                    onChangeText={[Function]}
-                    secureTextEntry={true}
-                    style={
-                      Object {
-                        "color": "white",
-                      }
-                    }
-                  />
-                </Styled(Item)>,
-                "virtual": undefined,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
-                    <Styled(Label)
-                      style={
-                        Object {
-                          "color": "white",
-                        }
-                      }
-                    >
-                      Password
-                    </Styled(Label)>,
-                    <Styled(Input)
-                      onChangeText={[Function]}
-                      secureTextEntry={true}
-                      style={
-                        Object {
-                          "color": "white",
-                        }
-                      }
-                    />,
-                  ],
-                  "floatingLabel": true,
-                  "style": Object {
-                    "marginLeft": "5%",
-                    "marginRight": "5%",
-                  },
-                  "virtual": undefined,
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "Password",
-                      "style": Object {
-                        "color": "white",
-                      },
-                      "virtual": undefined,
-                    },
-                    "ref": null,
-                    "rendered": "Password",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "onChangeText": [Function],
-                      "secureTextEntry": true,
-                      "style": Object {
-                        "color": "white",
-                      },
-                      "value": undefined,
-                      "virtual": undefined,
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                ],
-                "type": [Function],
-              },
-              "type": [Function],
-            },
+              "color": "white",
+            }
+          }
+        />
+      </Styled(Item)>
+    </Styled(Form)>
+    <Styled(Form)>
+      <Styled(Item)
+        floatingLabel={true}
+        style={
+          Object {
+            "marginLeft": "5%",
+            "marginRight": "5%",
+          }
+        }
+      >
+        <Styled(Label)
+          style={
             Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "block": true,
-                "children": <Styled(H1)
-                  style={
-                    Object {
-                      "color": "black",
-                      "fontSize": 20,
-                    }
-                  }
-                >
-                  Sign In
-                </Styled(H1)>,
-                "onPress": [Function],
-                "style": Object {
-                  "alignItems": "center",
-                  "backgroundColor": "white",
-                  "justifyContent": "center",
-                  "marginLeft": "5%",
-                  "marginRight": "5%",
-                  "marginTop": "5%",
-                },
-                "virtual": undefined,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "Sign In",
-                  "style": Object {
-                    "color": "black",
-                    "fontSize": 20,
-                  },
-                  "virtual": undefined,
-                },
-                "ref": null,
-                "rendered": "Sign In",
-                "type": [Function],
-              },
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+              "color": "white",
+            }
+          }
+        >
+          Password
+        </Styled(Label)>
+        <Styled(Input)
+          onChangeText={[Function]}
+          secureTextEntry={true}
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+        />
+      </Styled(Item)>
+    </Styled(Form)>
+    <Styled(Button)
+      block={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "justifyContent": "center",
+          "marginLeft": "5%",
+          "marginRight": "5%",
+          "marginTop": "5%",
+        }
+      }
+    >
+      <Styled(H1)
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 20,
+          }
+        }
+      >
+        Sign In
+      </Styled(H1)>
+    </Styled(Button)>
+  </Component>
+</Styled(Container)>
 `;
