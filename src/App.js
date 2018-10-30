@@ -9,7 +9,7 @@ import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
 import NavigationService from './NavigationService';
 import Reactotron from '../ReactotronConfig';
 import reducers from './reducers';
-import LoginScreen from './components/LoginScreen/LoginScreen';
+import LoginScreenComponent from './components/LoginScreen/LoginScreen';
 import HomeScreen from './components/HomeScreen/HomeScreen';
 import getTheme from '../native-base-theme/components';
 import commonColor from '../native-base-theme/variables/material';
@@ -34,10 +34,10 @@ const MainStack = createStackNavigator(
 const RootStack = createSwitchNavigator(
   {
     MainStack,
-    LoginScreen,
+    LoginScreenComponent,
   },
   {
-    initialRouteName: 'LoginScreen',
+    initialRouteName: 'LoginScreenComponent',
   },
 );
 
