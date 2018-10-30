@@ -52,7 +52,6 @@ export const loginUser = ({ email, password }) => dispatch => {
 };
 
 export const loginUserSuccess = (dispatch, user) => {
-  console.log('dispatching login success action');
   dispatch({
     type: LOGIN_USER_SUCCESS,
     payload: user,
@@ -62,7 +61,6 @@ export const loginUserSuccess = (dispatch, user) => {
 };
 
 export const loginUserFailed = dispatch => {
-  console.log('dispatching login failure action');
   showToast('Invalid Email/Password', 3000, 'top', 'danger');
   dispatch({ type: LOGIN_USER_FAIL });
   NavigationService.navigate('LoginScreenComponent');
