@@ -1,0 +1,67 @@
+import firebase from 'firebase';
+import NavigationService from '../NavigationService';
+import {
+  EMAIL_CHANGED,
+  PASSWORD_CHANGED,
+  LOGIN_USER_SUCCESS,
+  LOGIN_USER_FAIL,
+  LOGIN_USER,
+  LOGOUT_USER,
+  LOGOUT_USER_SUCCESS,
+  LOGOUT_USER_FAIL,
+} from './types';
+import { showToast } from '../components/common/showToast';
+
+export const emailChanged = text => (
+  {
+    type: EMAIL_CHANGED,
+    payload: text,
+  }
+);
+
+export const passwordChanged = text => (
+  {
+    type: PASSWORD_CHANGED,
+    payload: text,
+  }
+);
+
+export const logoutUser = () => dispatch => {
+  dispatch({ type: LOGOUT_USER });
+  firebase.auth().signOut()
+    .then(() => {
+      dispatch({ type: LOGOUT_USER_SUCCESS });
+      NavigationService.navigate('LoginScreenComponent');
+    }).catch(error => {
+      console.log(error);
+      dispatch({ type: LOGOUT_USER_FAIL });
+      NavigationService.back('HomeScreen');
+    });
+};
+
+export const loginUser = ({ email, password }) => dispatch => {
+  dispatch({ type: LOGIN_USER });
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(user => {
+      loginUserSuccess(dispatch, user);
+    })
+    .catch(error => {
+      console.log(error);
+      loginUserFailed(dispatch);
+    });
+};
+
+export const loginUserSuccess = (dispatch, user) => {
+  dispatch({
+    type: LOGIN_USER_SUCCESS,
+    payload: user,
+  });
+
+  NavigationService.navigate('HomeScreen');
+};
+
+export const loginUserFailed = dispatch => {
+  showToast('Invalid Email/Password', 3000, 'top', 'danger');
+  dispatch({ type: LOGIN_USER_FAIL });
+  NavigationService.navigate('LoginScreenComponent');
+};

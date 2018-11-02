@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingModal /> can render with visibility 1`] = `
+<Modal
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+  visible={true}
+>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.3)",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Styled(Spinner)
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    />
+    <Styled(H3)
+      style={
+        Object {
+          "color": "white",
+        }
+      }
+    >
+      This is a test
+    </Styled(H3)>
+  </Component>
+</Modal>
+`;
+
+exports[`<LoadingModal /> can render with visibility and without loadingLabel 1`] = `
+<Modal
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+  visible={true}
+>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0, 0, 0, 0.3)",
+        "bottom": 0,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Styled(Spinner)
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    />
+    <Styled(H3)
+      style={
+        Object {
+          "color": "white",
+        }
+      }
+    />
+  </Component>
+</Modal>
+`;
+
+exports[`<LoadingModal /> cannot render with default props 1`] = `undefined`;
+
+exports[`<LoadingModal /> cannot render without visibility 1`] = `false`;
