@@ -35,9 +35,10 @@ const RootStack = createSwitchNavigator(
   {
     MainStack,
     LoginScreen,
+    HomeScreen // Added only for testing purpose  
   },
   {
-    initialRouteName: 'LoginScreen',
+    initialRouteName: 'LoginScreen', // should actually be login screen
   },
 );
 
