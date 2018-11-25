@@ -7,18 +7,24 @@ import {
   Content,
 } from 'native-base';
 import { connect } from 'react-redux';
-import { logoutUser } from '../../actions';
+import { logoutUser } from '../../actions/AuthActions';
 import { LoadingModal } from '../common/LoadingModal/LoadingModal';
 
-class HomeScreen extends Component {
+export class HomeScreen extends Component {
   render() {
-    const { userLoggedOut, loading } = this.props;
+    const { userLoggedOut, loading, navigation } = this.props;
     return (
       <Container style={ { flex: 1, alignItems: 'center', justifyContent: 'center' } }>
         <LoadingModal visible={ loading } loadingLabel='Logging out...' />
         <Content>
           <H3>HomeScreen</H3>
           <Button primary onPress={ () => userLoggedOut() }><Text>Log Out</Text></Button>
+          <Button
+            primary
+            // onPress={ () => navigation.navigate('CourseHistoryScreen') }
+          >
+            <Text>Planner</Text>
+          </Button>
         </Content>
       </Container>
     );
