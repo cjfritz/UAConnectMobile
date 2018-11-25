@@ -5,6 +5,7 @@ exports[`<Homescreen /> renders with default props 1`] = `
   style={
     Object {
       "alignContent": "center",
+      "backgroundColor": "#67141A",
       "flex": 1,
     }
   }
@@ -15,39 +16,49 @@ exports[`<Homescreen /> renders with default props 1`] = `
   <Styled(Header)
     style={
       Object {
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "darkred",
+        "color": "black",
+        "fontSize": 60,
       }
     }
   >
-    <Styled(Button)
-      onPress={[Function]}
-      style={
-        Object {
-          "marginLeft": "auto",
-        }
-      }
-      title="LogOut"
-    />
+    <Styled(Right)>
+      <Styled(Button)
+        onPress={[Function]}
+        transparent={true}
+      >
+        <Styled(Text)
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 15,
+            }
+          }
+        >
+           Log Out 
+        </Styled(Text)>
+      </Styled(Button)>
+    </Styled(Right)>
   </Styled(Header)>
   <Styled(ViewNB)
     style={
       Object {
+        "alignItems": "center",
         "backgroundColor": "#67141A",
         "flex": 2,
+        "justifyContent": "center",
       }
     }
   >
     <Styled(Text)
       style={
         Object {
-          "color": "black",
-          "fontSize": 50,
-          "textAlign": "center",
-          "textAlignVertical": "center",
+          "color": "white",
+          "fontSize": 60,
         }
       }
     >
-       UAConnect 
+       UA Connect 
     </Styled(Text)>
   </Styled(ViewNB)>
   <Styled(ViewNB)
@@ -60,21 +71,21 @@ exports[`<Homescreen /> renders with default props 1`] = `
     <Styled(ViewNB)
       style={
         Object {
-          "backgroundColor": "green",
+          "backgroundColor": "#67141A",
           "flex": 1,
           "flexDirection": "row",
         }
       }
     >
       <QuickLink
-        color="#47cfcf"
+        color="rgba(255, 255, 255, 0.90)"
         iconName="ios-person"
         onPress={[Function]}
       >
         Profile
       </QuickLink>
       <QuickLink
-        color="#2c71b7"
+        color="rgba(255, 255, 255, 0.90)"
         iconName="ios-bookmarks"
         onPress={[Function]}
       >
@@ -84,21 +95,21 @@ exports[`<Homescreen /> renders with default props 1`] = `
     <Styled(ViewNB)
       style={
         Object {
-          "backgroundColor": "blue",
+          "backgroundColor": "#67141A",
           "flex": 1,
           "flexDirection": "row",
         }
       }
     >
       <QuickLink
-        color="#76a82f"
+        color="rgba(255, 255, 255, 0.90)"
         iconName="ios-calendar"
         onPress={[Function]}
       >
         Event
       </QuickLink>
       <QuickLink
-        color="#f59930"
+        color="rgba(255, 255, 255, 0.90)"
         iconName="md-paper"
         onPress={[Function]}
       >
