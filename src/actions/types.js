@@ -7,3 +7,14 @@ export const LOGIN_USER = 'login_user';
 export const LOGOUT_USER = 'logout_user';
 export const LOGOUT_USER_SUCCESS = 'logout_user_success';
 export const LOGOUT_USER_FAIL = 'logout_user_fail';
+
+// Planner action creators
+export const PLANNER_UPDATE = 'planner_update';
+export const PLANNER_CREATE = 'planner_create';
+export const PLANNER_FETCH = 'planner_fetch';
+export const PLANNER_FETCH_SUCCESS = 'planner_fetch_success';
+export const PLANNER_SAVE_SUCCESS = 'planner_save_success';
+export const PLANNER_FETCH_FAILURE = 'planner_fetch_failure';
+export const PLANNER_SAVE_FAILURE = 'planner_save_failure';
+export const PLANNER_CLEAR = 'planner_clear';
+export const PLANNER_VALID_UPDATE = 'planner_valid_update';
