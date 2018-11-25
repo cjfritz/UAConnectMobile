@@ -1,0 +1,959 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CourseCard /> renders with default props 1`] = `
+<Styled(Card)>
+  <Styled(CardItem)
+    bordered={true}
+    header={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "darkred",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Styled(Text)
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 18,
+        }
+      }
+    />
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <Styled(Body)
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "black",
+            "fontSize": 15,
+            "justifyContent": "center",
+          }
+        }
+      />
+    </Styled(Body)>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <GridNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            GPA
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text) />
+        </RowNB>
+      </ColumnNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            Term
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "black",
+                "fontSize": 15,
+                "justifyContent": "center",
+              }
+            }
+          />
+        </RowNB>
+      </ColumnNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            Units
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "black",
+                "fontSize": 15,
+                "justifyContent": "center",
+              }
+            }
+          />
+        </RowNB>
+      </ColumnNB>
+    </GridNB>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <ColumnNB
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <RowNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Styled(Button)
+          onPress={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "darkred",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 18,
+              }
+            }
+          >
+            Edit Course
+          </Styled(Text)>
+        </Styled(Button)>
+      </RowNB>
+    </ColumnNB>
+  </Styled(CardItem)>
+</Styled(Card)>
+`;
+
+exports[`<CourseCard /> renders with defined props 1`] = `
+<Styled(Card)>
+  <Styled(CardItem)
+    bordered={true}
+    header={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "darkred",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Styled(Text)
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 18,
+        }
+      }
+    >
+      TestCourse
+    </Styled(Text)>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <Styled(Body)
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "black",
+            "fontSize": 15,
+            "justifyContent": "center",
+          }
+        }
+      >
+        TestDescription
+      </Styled(Text)>
+    </Styled(Body)>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <GridNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            GPA
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)>
+            4
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            Term
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "black",
+                "fontSize": 15,
+                "justifyContent": "center",
+              }
+            }
+          >
+            TestTerm
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            Units
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "black",
+                "fontSize": 15,
+                "justifyContent": "center",
+              }
+            }
+          >
+            4
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+    </GridNB>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <ColumnNB
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <RowNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Styled(Button)
+          onPress={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "darkred",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 18,
+              }
+            }
+          >
+            Edit Course
+          </Styled(Text)>
+        </Styled(Button)>
+      </RowNB>
+    </ColumnNB>
+  </Styled(CardItem)>
+</Styled(Card)>
+`;
+
+exports[`<CourseCard /> renders with missing grade 1`] = `
+<Styled(Card)>
+  <Styled(CardItem)
+    bordered={true}
+    header={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "darkred",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Styled(Text)
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 18,
+        }
+      }
+    >
+      TestCourse
+    </Styled(Text)>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <Styled(Body)
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "black",
+            "fontSize": 15,
+            "justifyContent": "center",
+          }
+        }
+      >
+        TestDescription
+      </Styled(Text)>
+    </Styled(Body)>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <GridNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            GPA
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)>
+            N/A
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            Term
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "black",
+                "fontSize": 15,
+                "justifyContent": "center",
+              }
+            }
+          >
+            TestTerm
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            Units
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "black",
+                "fontSize": 15,
+                "justifyContent": "center",
+              }
+            }
+          >
+            4
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+    </GridNB>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <ColumnNB
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <RowNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Styled(Button)
+          onPress={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "darkred",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 18,
+              }
+            }
+          >
+            Edit Course
+          </Styled(Text)>
+        </Styled(Button)>
+      </RowNB>
+    </ColumnNB>
+  </Styled(CardItem)>
+</Styled(Card)>
+`;
+
+exports[`<CourseCard /> renders with missing units 1`] = `
+<Styled(Card)>
+  <Styled(CardItem)
+    bordered={true}
+    header={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "darkred",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Styled(Text)
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 18,
+        }
+      }
+    >
+      TestCourse
+    </Styled(Text)>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <Styled(Body)
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "black",
+            "fontSize": 15,
+            "justifyContent": "center",
+          }
+        }
+      >
+        TestDescription
+      </Styled(Text)>
+    </Styled(Body)>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <GridNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            GPA
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)>
+            4
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            Term
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "black",
+                "fontSize": 15,
+                "justifyContent": "center",
+              }
+            }
+          >
+            TestTerm
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            header={true}
+            style={
+              Object {
+                "color": "darkred",
+                "fontSize": 18,
+              }
+            }
+          >
+            Units
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "alignItems": "center",
+                "color": "black",
+                "fontSize": 15,
+                "justifyContent": "center",
+              }
+            }
+          >
+            N/A
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+    </GridNB>
+  </Styled(CardItem)>
+  <Styled(CardItem)
+    bordered={true}
+  >
+    <ColumnNB
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <RowNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Styled(Button)
+          onPress={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "darkred",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 18,
+              }
+            }
+          >
+            Edit Course
+          </Styled(Text)>
+        </Styled(Button)>
+      </RowNB>
+    </ColumnNB>
+  </Styled(CardItem)>
+</Styled(Card)>
+`;
