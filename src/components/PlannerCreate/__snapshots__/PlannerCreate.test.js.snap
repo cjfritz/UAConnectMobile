@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlannerCreate /> can render with empty, invalid props 1`] = `
+<Styled(Container)>
+  <Styled(Content)>
+    <Connect(PlannerForm) />
+    <Styled(Button)
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "darkred",
+          "justifyContent": "center",
+          "marginTop": "5%",
+          "width": "40%",
+        }
+      }
+    >
+      <Styled(H3)
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        Create Course
+      </Styled(H3)>
+    </Styled(Button)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<PlannerCreate /> can render with invalid text for grade and units props 1`] = `
+<Styled(Container)>
+  <Styled(Content)>
+    <Connect(PlannerForm) />
+    <Styled(Button)
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "darkred",
+          "justifyContent": "center",
+          "marginTop": "5%",
+          "width": "40%",
+        }
+      }
+    >
+      <Styled(H3)
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        Create Course
+      </Styled(H3)>
+    </Styled(Button)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<PlannerCreate /> can render with invalid values greater than max range for grade and units props 1`] = `
+<Styled(Container)>
+  <Styled(Content)>
+    <Connect(PlannerForm) />
+    <Styled(Button)
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "darkred",
+          "justifyContent": "center",
+          "marginTop": "5%",
+          "width": "40%",
+        }
+      }
+    >
+      <Styled(H3)
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        Create Course
+      </Styled(H3)>
+    </Styled(Button)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<PlannerCreate /> can render with invalid values less than min range for grade and units props 1`] = `
+<Styled(Container)>
+  <Styled(Content)>
+    <Connect(PlannerForm) />
+    <Styled(Button)
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "darkred",
+          "justifyContent": "center",
+          "marginTop": "5%",
+          "width": "40%",
+        }
+      }
+    >
+      <Styled(H3)
+        style={
+          Object {
+            "color": "white",
+          }
+        }
+      >
+        Create Course
+      </Styled(H3)>
+    </Styled(Button)>
+  </Styled(Content)>
+</Styled(Container)>
+`;
