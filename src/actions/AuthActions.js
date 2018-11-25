@@ -31,11 +31,11 @@ export const logoutUser = () => dispatch => {
   firebase.auth().signOut()
     .then(() => {
       dispatch({ type: LOGOUT_USER_SUCCESS });
-      NavigationService.navigate('LoginScreen');
+      NavigationService.navigate('Login');
     }).catch(error => {
       console.log(error);
       dispatch({ type: LOGOUT_USER_FAIL });
-      NavigationService.back('HomeScreen');
+      NavigationService.back('Home');
     });
 };
 
@@ -58,12 +58,12 @@ export const loginUserSuccess = (dispatch, user) => {
     payload: user,
   });
 
-  NavigationService.navigate('HomeScreen');
+  NavigationService.navigate('Home');
 };
 
 export const loginUserFailed = dispatch => {
   console.log('dispatching login failure action');
   showToast('Invalid Email/Password', 3000, 'top', 'danger');
   dispatch({ type: LOGIN_USER_FAIL });
-  NavigationService.navigate('LoginScreen');
+  NavigationService.navigate('Login');
 };
