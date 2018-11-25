@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Homescreen /> renders with default props 1`] = `
+<Styled(ViewNB)
+  style={
+    Object {
+      "alignContent": "center",
+      "flex": 1,
+    }
+  }
+>
+  <LoadingModal
+    loadingLabel="Logging out..."
+  />
+  <Styled(Header)
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+      }
+    }
+  >
+    <Styled(Button)
+      onPress={[Function]}
+      style={
+        Object {
+          "marginLeft": "auto",
+        }
+      }
+      title="LogOut"
+    />
+  </Styled(Header)>
+  <Styled(ViewNB)
+    style={
+      Object {
+        "backgroundColor": "#67141A",
+        "flex": 2,
+      }
+    }
+  >
+    <Styled(Text)
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 50,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+        }
+      }
+    >
+       UAConnect 
+    </Styled(Text)>
+  </Styled(ViewNB)>
+  <Styled(ViewNB)
+    style={
+      Object {
+        "flexGrow": 7,
+      }
+    }
+  >
+    <Styled(ViewNB)
+      style={
+        Object {
+          "backgroundColor": "green",
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <QuickLink
+        color="#47cfcf"
+        iconName="ios-person"
+        onPress={[Function]}
+      >
+        Profile
+      </QuickLink>
+      <QuickLink
+        color="#2c71b7"
+        iconName="ios-bookmarks"
+        onPress={[Function]}
+      >
+        Class
+      </QuickLink>
+    </Styled(ViewNB)>
+    <Styled(ViewNB)
+      style={
+        Object {
+          "backgroundColor": "blue",
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <QuickLink
+        color="#76a82f"
+        iconName="ios-calendar"
+        onPress={[Function]}
+      >
+        Event
+      </QuickLink>
+      <QuickLink
+        color="#f59930"
+        iconName="md-paper"
+        onPress={[Function]}
+      >
+        News
+      </QuickLink>
+    </Styled(ViewNB)>
+  </Styled(ViewNB)>
+</Styled(ViewNB)>
+`;
