@@ -8,7 +8,7 @@
     "test:update": "jest --updateSnapshot",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
-    "lint": "eslint /src",
+    "lint": "eslint src/**/*.js",
     "validate": "npm run lint && npm run test"
   },
   "dependencies": {
