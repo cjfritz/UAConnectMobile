@@ -6,8 +6,6 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 import Login from './components/LoginScreen/LoginScreen';
 import Home from './components/HomeScreen/HomeScreen';
-import CourseScreen from './components/CourseScreen/CourseScreen';
-import ProfileScreen from './components/ProfileScreen/ProfileScreen';
 import News from './components/News/News';
 import Events from './components/Events/Events';
 
@@ -20,24 +18,6 @@ const MainStack = createBottomTabNavigator({
         <Icon name='ios-home' color={ tintColor } size={ 24 } />
       ),
     },
-  },
-  Profile: {
-    screen: ProfileScreen,
-    navigationOptions: {
-      tabBarlabel: 'Profile',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon name='ios-person' color={ tintColor } size={ 24 } />
-      )
-    }
-  },
-  Class: {
-    screen: CourseScreen,
-    navigationOptions: {
-      tabBarlabel: 'course',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon name='ios-bookmarks' color={ tintColor } size={ 24 } />
-      )
-    }
   },
   News: {
     screen: News,
