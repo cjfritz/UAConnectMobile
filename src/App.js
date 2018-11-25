@@ -19,6 +19,7 @@ require('core-js/fn/symbol/iterator');
 require('core-js/fn/map');
 require('core-js/fn/set');
 require('core-js/fn/array/find');
+
 export default class App extends Component {
   componentDidMount() {
     // Initialize Firebase

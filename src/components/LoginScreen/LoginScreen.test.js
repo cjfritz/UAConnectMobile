@@ -1,18 +1,26 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import { LoginScreen } from './LoginScreen';
 
-configure({ adapter: new Adapter() });
-
 describe('<LoginScreen />', () => {
-  it('renders correctly initially', () => {
-    const renderer = shallow(<LoginScreen />);
-    expect(renderer).toMatchSnapshot();
+  it('renders with default props', () => {
+    const shallowRenderer = new ShallowRenderer();
+    shallowRenderer.render(<LoginScreen />);
+    expect(shallowRenderer.getRenderOutput()).toMatchSnapshot();
   });
 
-  // it('renders with an email', () => {
-  //   const props = {
-  //   };
-  // });
+  it('renders with complete email and password fields', () => {
+    const props = {
+      email: 'test@test.com',
+      password: 'password',
+      onEmailChange: jest.fn(),
+      onPasswordChange: jest.fn(),
+      loading: false,
+      onLoginUser: jest.fn(),
+    };
+
+    const shallowRenderer = new ShallowRenderer();
+    shallowRenderer.render(<LoginScreen { ...props } />);
+    expect(shallowRenderer.getRenderOutput()).toMatchSnapshot();
+  });
 });

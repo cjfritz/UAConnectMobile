@@ -1,73 +1,33 @@
 import firebase from 'firebase';
-// import firebasemock from 'firebase-mock';
 import * as actions from './AuthActions';
 import * as types from './types';
 
-// const mockauth = new firebasemock.MockAuthentication();
-// const mockdatabase = new firebasemock.MockFirebase();
-// const mockfirestore = new firebasemock.MockFirestore();
-// const mockstorage = new firebasemock.MockStorage();
-// const mockmessaging = new firebasemock.MockMessaging();
-// const mocksdk = new firebasemock.MockFirebaseSdk(
-//   // use null if your code does not use RTDB
-//   path => {
-//     return path ? mockdatabase.child(path) : mockdatabase;
-//   },
-//   // use null if your code does not use AUTHENTICATION
-//   () => {
-//     return mockauth;
-//   },
-//   // use null if your code does not use FIRESTORE
-//   () => {
-//     return mockfirestore;
-//   },
-//   // use null if your code does not use STORAGE
-//   () => {
-//     return mockstorage;
-//   },
-//   // use null if your code does not use MESSAGING
-//   () => {
-//     return mockmessaging;
-//   }
-// );
+const signOut = jest.fn(resolve => {
+  if (resolve) {
+    return Promise.resolve();
+  }
 
-// jest.mock('firebase', () => ({
-//   signOut(resolve) {
-//     return resolve ? Promise.resolve() : Promise.reject();
-//   },
-// }));
-// jest.mock('firebase', () => ({
-//   app: {
-//     App: {
-//       auth: () => ({
-//         app: {},
-//         signOut: () => Promise.resolve(),
-//       }),
-//     },
-//   },
-//   initializeApp: jest.fn(),
-//   auth: () => ({
-//     app: {},
-//     signOut: () => Promise.resolve(),
-//   }),
-// }));
-
-
-// jest.mock('firebase', () => {
-//   signOut() {}
-// });
-
-const signOut = jest.fn(() => {
-  return Promise.resolve();
+  return Promise.reject();
 });
 
-const initializeApp = jest
-  .spyOn(firebase, 'initializeApp')
+// Firebase mocking logic adapted from https://github.com/mrbenhowl/mocking-firebase-initializeApp-and-firebase-auth-using-jest
+
+const signInWithEmailAndPassword = jest.fn((email, password, resolve) => {
+  const userData = { email, password };
+  const error = 'error';
+  if (resolve) {
+    return Promise.resolve(userData);
+  }
+  return Promise.reject(error);
+});
+
+jest.spyOn(firebase, 'initializeApp')
   .mockImplementation(() => {
     return {
       auth: () => {
         return {
           signOut,
+          signInWithEmailAndPassword,
         };
       },
     };
@@ -76,6 +36,7 @@ const initializeApp = jest
 jest.spyOn(firebase, 'auth').mockImplementation(() => {
   return {
     signOut,
+    signInWithEmailAndPassword,
     currentUser: {
       displayName: 'testDisplayName',
       email: 'test@test.com',
@@ -84,7 +45,7 @@ jest.spyOn(firebase, 'auth').mockImplementation(() => {
   };
 });
 
-describe('Authentication actions', () => {
+describe('email or password actions', () => {
   it('should create an action to change email text', () => {
     const text = 'Test@test.com';
     const expectedAction = {
@@ -104,32 +65,77 @@ describe('Authentication actions', () => {
 
     expect(actions.passwordChanged(text)).toEqual(expectedAction);
   });
+});
 
-  it('should create an action to logout user', () => {
+describe('logoutUser action creator', () => {
+  it('should dispatch correct action for success case', async () => {
+    expect.assertions(2);
+    const resolvePromise = true;
     const mockDispatch = jest.fn();
     const result = actions.logoutUser();
-    // firebase.auth().signOut().then(() => {
 
-    // });
-    // firebase.auth = jest.fn().mockReturnValue({
-    //   currentUser: true,
-    //   signOut: () => jest.fn(),
-    // });
-    // firebase.auth().signOut().mockImplementationOnce(() => Promise.resolve());
-    // mocksdk.auth().signOut();
-    // mocksdk.auth().flush();
     result(mockDispatch);
     expect(mockDispatch.mock.calls[0][0]).toEqual({ type: types.LOGOUT_USER });
-    firebase.auth().signOut().then(() => {
+    firebase.auth().signOut(resolvePromise).then(() => {
       expect(mockDispatch.mock.calls[0][1]).toEqual({ type: types.LOGOUT_USER_SUCCESS });
     });
-    // result(mockDispatch).then(() => {
-    //   expect(mockDispatch.mock.calls[0][0]).toEqual({ type: types.LOGOUT_USER_SUCCESS });
-    // });
+  });
 
-    // firebase.auth().signOut().mockImplementationOnce(() => Promise.reject());
-    // result(mockDispatch).then(() => {
-    //   expect(mockDispatch.mock.calls[0][1]).toEqual({ type: types.LOGOUT_USER_FAIL });
-    // });
+  it('should dispatch correct action for failure case', async () => {
+    expect.assertions(2);
+    const resolvePromise = false;
+    const mockDispatch = jest.fn();
+    const result = actions.logoutUser();
+
+    result(mockDispatch);
+    expect(mockDispatch.mock.calls[0][0]).toEqual({ type: types.LOGOUT_USER });
+    firebase.auth().signOut(resolvePromise).catch(() => {
+      expect(mockDispatch.mock.calls[0][1]).toEqual({ type: types.LOGOUT_USER_FAIL });
+    });
+  });
+});
+
+describe('loginUser action creator', async () => {
+  it('should dispatch correct acton for success case', async () => {
+    expect.assertions(4);
+    const resolvePromise = true;
+    const { email, password } = { email: 'test@test.com', password: 'password' };
+    const mockDispatch = jest.fn();
+    const result = actions.loginUser({ email, password });
+    const mockLoginUserSuccess = jest.fn((dispatch, userData) => {
+      dispatch({ type: types.LOGIN_USER_SUCCESS, payload: userData });
+    });
+
+    result(mockDispatch);
+    expect(mockDispatch.mock.calls[0][0]).toEqual({ type: types.LOGIN_USER });
+    await firebase.auth().signInWithEmailAndPassword(email, password, resolvePromise).then(userData => {
+      expect(userData).toEqual({ email, password });
+      mockLoginUserSuccess(mockDispatch, userData);
+    });
+    expect(mockLoginUserSuccess).toHaveBeenCalled();
+    expect(mockDispatch.mock.calls[1][0]).toEqual({
+      type: types.LOGIN_USER_SUCCESS,
+      payload: { email, password },
+    });
+  });
+
+  it('should dispatch correct action for failure case', async () => {
+    expect.assertions(4);
+    const resolvePromise = false;
+    const { email, password } = { email: 'test@test.com', password: 'password' };
+    const mockDispatch = jest.fn();
+    const result = actions.loginUser({ email, password });
+    const mockLoginUserFailed = jest.fn(dispatch => {
+      dispatch({ type: types.LOGIN_USER_FAIL });
+    });
+
+    result(mockDispatch);
+    expect(mockDispatch.mock.calls[0][0]).toEqual({ type: types.LOGIN_USER });
+    await firebase.auth().signInWithEmailAndPassword(email, password, resolvePromise).catch(error => {
+      expect(error).toEqual('error');
+      mockLoginUserFailed(mockDispatch);
+    });
+    expect(mockLoginUserFailed).toHaveBeenCalled();
+    expect(mockDispatch.mock.calls[1][0]).toEqual({ type: types.LOGIN_USER_FAIL });
   });
 });
