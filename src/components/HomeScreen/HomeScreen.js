@@ -1,30 +1,71 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
-  Container,
-  H3,
   Text,
   Button,
-  Content,
+  View,
+  Header,
+  Right,
 } from 'native-base';
-import { connect } from 'react-redux';
-import { logoutUser } from '../../actions';
+import { logoutUser } from '../../actions/AuthActions';
+import styles from './HomeScreen.style';
 import { LoadingModal } from '../common/LoadingModal/LoadingModal';
+import QuickLink from '../common/QuickLink/QuickLink';
 
-class HomeScreen extends Component {
+export class HomeScreen extends Component {
   render() {
-    const { userLoggedOut, loading } = this.props;
+    const { userLoggedOut, loading, navigation } = this.props;
     return (
-      <Container style={ { flex: 1, alignItems: 'center', justifyContent: 'center' } }>
+      <View style={ styles.Container }>
         <LoadingModal visible={ loading } loadingLabel='Logging out...' />
-        <Content>
-          <H3>HomeScreen</H3>
-          <Button primary onPress={ () => userLoggedOut() }><Text>Log Out</Text></Button>
-        </Content>
-      </Container>
+        <Header style={ styles.logout }>
+          <Right style={ styles.logoutBody }>
+            <Button transparent onPress={ () => userLoggedOut() }>
+              <Text style={ styles.logoutText }> Log Out </Text>
+            </Button>
+          </Right>
+        </Header>
+        <View style={ styles.Header }>
+          <Text style={ styles.uaconnect }> UA Connect </Text>
+        </View>
+        <View style={ styles.BContainer }>
+          <View style={ styles.Row1 }>
+            <QuickLink
+              iconName='ios-person'
+              color='rgba(255, 255, 255, 0.90)'
+              onPress={ () => navigation.navigate('Profile') }
+            >
+              Profile
+            </QuickLink>
+            <QuickLink
+              iconName='ios-bookmarks'
+              color='rgba(255, 255, 255, 0.90)'
+              onPress={ () => navigation.navigate('Class') }
+            >
+              Class
+            </QuickLink>
+          </View>
+          <View style={ styles.Row2 }>
+            <QuickLink
+              iconName='ios-calendar'
+              color='rgba(255, 255, 255, 0.90)'
+              onPress={ () => navigation.navigate('Event') }
+            >
+              Event
+            </QuickLink>
+            <QuickLink
+              iconName='md-paper'
+              color='rgba(255, 255, 255, 0.90)'
+              onPress={ () => navigation.navigate('News') }
+            >
+              News
+            </QuickLink>
+          </View>
+        </View>
+      </View>
     );
   }
 }
-
 const mapDispatchToProps = dispatch => (
   ({
     userLoggedOut: () => dispatch(logoutUser()),
@@ -38,3 +79,4 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
+

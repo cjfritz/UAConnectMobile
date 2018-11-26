@@ -5,14 +5,13 @@ import firebase from 'firebase';
 import { Provider } from 'react-redux';
 import { applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
-import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
 import NavigationService from './NavigationService';
 import Reactotron from '../ReactotronConfig';
 import reducers from './reducers';
-import LoginScreenComponent from './components/LoginScreen/LoginScreen';
-import HomeScreen from './components/HomeScreen/HomeScreen';
 import getTheme from '../native-base-theme/components';
 import commonColor from '../native-base-theme/variables/material';
+import RootStack from './Navigation';
+
 // symbol polyfills
 global.Symbol = require('core-js/es6/symbol');
 require('core-js/fn/symbol/iterator');
@@ -20,26 +19,6 @@ require('core-js/fn/symbol/iterator');
 require('core-js/fn/map');
 require('core-js/fn/set');
 require('core-js/fn/array/find');
-
-const MainStack = createStackNavigator(
-  {
-    HomeScreen,
-    // The rest of the app's screens will be added here
-  },
-  {
-    initialRouteName: 'HomeScreen',
-  },
-);
-
-const RootStack = createSwitchNavigator(
-  {
-    MainStack,
-    LoginScreenComponent,
-  },
-  {
-    initialRouteName: 'LoginScreenComponent',
-  },
-);
 
 export default class App extends Component {
   componentDidMount() {

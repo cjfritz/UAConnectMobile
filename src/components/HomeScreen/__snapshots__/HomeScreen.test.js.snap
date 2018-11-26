@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Homescreen /> renders with default props 1`] = `
+<Styled(ViewNB)
+  style={
+    Object {
+      "alignContent": "center",
+      "backgroundColor": "#67141A",
+      "flex": 1,
+    }
+  }
+>
+  <LoadingModal
+    loadingLabel="Logging out..."
+    visible={false}
+  />
+  <Styled(Header)
+    style={
+      Object {
+        "backgroundColor": "darkred",
+        "color": "black",
+        "fontSize": 60,
+      }
+    }
+  >
+    <Styled(Right)>
+      <Styled(Button)
+        onPress={[Function]}
+        transparent={true}
+      >
+        <Styled(Text)
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 15,
+            }
+          }
+        >
+           Log Out 
+        </Styled(Text)>
+      </Styled(Button)>
+    </Styled(Right)>
+  </Styled(Header)>
+  <Styled(ViewNB)
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#67141A",
+        "flex": 2,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Styled(Text)
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 60,
+        }
+      }
+    >
+       UA Connect 
+    </Styled(Text)>
+  </Styled(ViewNB)>
+  <Styled(ViewNB)
+    style={
+      Object {
+        "flexGrow": 7,
+      }
+    }
+  >
+    <Styled(ViewNB)
+      style={
+        Object {
+          "backgroundColor": "#67141A",
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <QuickLink
+        color="rgba(255, 255, 255, 0.90)"
+        iconName="ios-person"
+        onPress={[Function]}
+      >
+        Profile
+      </QuickLink>
+      <QuickLink
+        color="rgba(255, 255, 255, 0.90)"
+        iconName="ios-bookmarks"
+        onPress={[Function]}
+      >
+        Class
+      </QuickLink>
+    </Styled(ViewNB)>
+    <Styled(ViewNB)
+      style={
+        Object {
+          "backgroundColor": "#67141A",
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <QuickLink
+        color="rgba(255, 255, 255, 0.90)"
+        iconName="ios-calendar"
+        onPress={[Function]}
+      >
+        Event
+      </QuickLink>
+      <QuickLink
+        color="rgba(255, 255, 255, 0.90)"
+        iconName="md-paper"
+        onPress={[Function]}
+      >
+        News
+      </QuickLink>
+    </Styled(ViewNB)>
+  </Styled(ViewNB)>
+</Styled(ViewNB)>
+`;
