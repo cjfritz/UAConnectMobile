@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { WebView } from 'react-native';
-import { Button, View } from 'native-base';
 
 class Events extends Component {
   render() {
