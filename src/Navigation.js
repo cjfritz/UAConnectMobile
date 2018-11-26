@@ -40,7 +40,7 @@ const MainStack = createBottomTabNavigator({
     navigationOptions: {
       tabBarlabel: 'Planner',
       tabBarIcon: ({ tintColor }) => (
-        <Icon name='ios-home' color={ tintColor } size={ 24 } />
+        <Icon name='ios-bookmarks' color={ tintColor } size={ 24 } />
       ),
     },
   },
