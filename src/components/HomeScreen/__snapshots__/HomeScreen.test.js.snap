@@ -12,6 +12,7 @@ exports[`<Homescreen /> renders with default props 1`] = `
 >
   <LoadingModal
     loadingLabel="Logging out..."
+    visible={false}
   />
   <Styled(Header)
     style={

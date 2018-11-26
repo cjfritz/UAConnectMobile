@@ -16,7 +16,7 @@ export class HomeScreen extends Component {
   render() {
     const { userLoggedOut, loading, navigation } = this.props;
     return (
-      <View style={ styles.Container }>        
+      <View style={ styles.Container }>
         <LoadingModal visible={ loading } loadingLabel='Logging out...' />
         <Header style={ styles.logout }>
           <Right style={ styles.logoutBody }>
@@ -33,7 +33,7 @@ export class HomeScreen extends Component {
             <QuickLink
               iconName='ios-person'
               color='rgba(255, 255, 255, 0.90)'
-              onPress={ () => navigation.navigate('Profile') }  
+              onPress={ () => navigation.navigate('Profile') }
             >
               Profile
             </QuickLink>
@@ -48,14 +48,14 @@ export class HomeScreen extends Component {
           <View style={ styles.Row2 }>
             <QuickLink
               iconName='ios-calendar'
-              color='rgba(255, 255, 255, 0.90)'             
+              color='rgba(255, 255, 255, 0.90)'
               onPress={ () => navigation.navigate('Event') }
             >
               Event
             </QuickLink>
             <QuickLink
               iconName='md-paper'
-              color='rgba(255, 255, 255, 0.90)'              
+              color='rgba(255, 255, 255, 0.90)'
               onPress={ () => navigation.navigate('News') }
             >
               News
