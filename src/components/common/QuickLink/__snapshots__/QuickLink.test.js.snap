@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<QuickLink /> renders with course plannner props 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[MockFunction]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderBottomLeftRadius": 20,
+      "borderBottomRightRadius": 20,
+      "borderBottomWidth": 5,
+      "borderTopEndRadius": 20,
+      "borderTopStartRadius": 20,
+      "flex": 1,
+      "justifyContent": "center",
+      "marginBottom": 40,
+      "marginLeft": 20,
+      "marginRight": 20,
+      "marginTop": 20,
+    }
+  }
+>
+  <Icon
+    allowFontScaling={false}
+    name="ios-bookmarks"
+    size={150}
+    style={
+      Object {
+        "color": "black",
+      }
+    }
+  />
+  <Styled(Text)>
+    Course Planner
+  </Styled(Text)>
+</TouchableOpacity>
+`;
+
+exports[`<QuickLink /> renders with event props 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[MockFunction]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderBottomLeftRadius": 20,
+      "borderBottomRightRadius": 20,
+      "borderBottomWidth": 5,
+      "borderTopEndRadius": 20,
+      "borderTopStartRadius": 20,
+      "flex": 1,
+      "justifyContent": "center",
+      "marginBottom": 40,
+      "marginLeft": 20,
+      "marginRight": 20,
+      "marginTop": 20,
+    }
+  }
+>
+  <Icon
+    allowFontScaling={false}
+    name="ios-calendar"
+    size={150}
+    style={
+      Object {
+        "color": "black",
+      }
+    }
+  />
+  <Styled(Text)>
+    Event
+  </Styled(Text)>
+</TouchableOpacity>
+`;
+
+exports[`<QuickLink /> renders with news props 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[MockFunction]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderBottomLeftRadius": 20,
+      "borderBottomRightRadius": 20,
+      "borderBottomWidth": 5,
+      "borderTopEndRadius": 20,
+      "borderTopStartRadius": 20,
+      "flex": 1,
+      "justifyContent": "center",
+      "marginBottom": 40,
+      "marginLeft": 20,
+      "marginRight": 20,
+      "marginTop": 20,
+    }
+  }
+>
+  <Icon
+    allowFontScaling={false}
+    name="md-paper"
+    size={150}
+    style={
+      Object {
+        "color": "black",
+      }
+    }
+  />
+  <Styled(Text)>
+    News
+  </Styled(Text)>
+</TouchableOpacity>
+`;
+
+exports[`<QuickLink /> renders with profile props 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[MockFunction]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "borderBottomLeftRadius": 20,
+      "borderBottomRightRadius": 20,
+      "borderBottomWidth": 5,
+      "borderTopEndRadius": 20,
+      "borderTopStartRadius": 20,
+      "flex": 1,
+      "justifyContent": "center",
+      "marginBottom": 40,
+      "marginLeft": 20,
+      "marginRight": 20,
+      "marginTop": 20,
+    }
+  }
+>
+  <Icon
+    allowFontScaling={false}
+    name="ios-person"
+    size={150}
+    style={
+      Object {
+        "color": "black",
+      }
+    }
+  />
+  <Styled(Text)>
+    Profile
+  </Styled(Text)>
+</TouchableOpacity>
+`;
