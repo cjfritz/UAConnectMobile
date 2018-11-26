@@ -6,12 +6,13 @@ import firebase from 'firebase';
 import { Provider } from 'react-redux';
 import { applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
-import RootStack from './Navigation';
 import NavigationService from './NavigationService';
 import Reactotron from '../ReactotronConfig';
 import reducers from './reducers';
 import getTheme from '../native-base-theme/components';
 import commonColor from '../native-base-theme/variables/material';
+import RootStack from './Navigation';
+
 // symbol polyfills
 global.Symbol = require('core-js/es6/symbol');
 require('core-js/fn/symbol/iterator');

@@ -10,6 +10,8 @@ import Home from './components/HomeScreen/HomeScreen';
 import Planner from './components/PlannerScreen/PlannerScreen';
 import PlannerCreateComponent from './components/PlannerCreate/PlannerCreate';
 import PlannerEditComponent from './components/PlannerEdit/PlannerEdit';
+import News from './components/News/News';
+import Events from './components/Events/Events';
 
 const PlannerStack = createStackNavigator(
   {
@@ -39,6 +41,24 @@ const MainStack = createBottomTabNavigator({
       tabBarlabel: 'Planner',
       tabBarIcon: ({ tintColor }) => (
         <Icon name='ios-home' color={ tintColor } size={ 24 } />
+      ),
+    },
+  },
+  News: {
+    screen: News,
+    navigationOptions: {
+      tabBarlabel: 'News',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name='md-paper' color={ tintColor } size={ 24 } />
+      ),
+    },
+  },
+  Event: {
+    screen: Events,
+    navigationOptions: {
+      tabBarlabel: 'Events',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name='ios-calendar' color={ tintColor } size={ 24 } />
       ),
     },
   },
