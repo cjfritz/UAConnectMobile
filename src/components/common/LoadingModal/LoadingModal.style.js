@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     bottom: 0,
     justifyContent: 'center',
     left: 0,
@@ -17,9 +17,6 @@ export default StyleSheet.create({
     position: 'absolute',
     right: 0,
     top: 0,
-  },
-  spinner: {
-    color: 'red',
   },
   text: {
     color: 'white',

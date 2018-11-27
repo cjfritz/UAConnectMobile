@@ -52,7 +52,6 @@ rules:
     - warn
     - error
     - info
-    - tron # we make this a reference to Reactotron
 
   no-underscore-dangle: off
 

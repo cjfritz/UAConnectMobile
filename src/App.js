@@ -1,5 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 import React, { Component } from 'react';
+import { YellowBox } from 'react-native';
 import { Root, StyleProvider } from 'native-base';
 import firebase from 'firebase';
 import { Provider } from 'react-redux';
@@ -21,17 +22,28 @@ require('core-js/fn/set');
 require('core-js/fn/array/find');
 
 export default class App extends Component {
+  constructor() {
+    super();
+    // disable unnecessary yellowbox warnings
+    YellowBox.ignoreWarnings([
+      'Setting a timer',
+      'Warning: Functions are not valid',
+    ]);
+  }
+
   componentDidMount() {
     // Initialize Firebase
-    const config = {
-      apiKey: 'AIzaSyDveQD6KC3yCpfbLteFsQdpuD8nCKFiTsY',
-      authDomain: 'uaconnect-mobile.firebaseapp.com',
-      databaseURL: 'https://uaconnect-mobile.firebaseio.com',
-      projectId: 'uaconnect-mobile',
-      storageBucket: 'uaconnect-mobile.appspot.com',
-      messagingSenderId: '681918160326',
-    };
-    firebase.initializeApp(config);
+    if (!firebase.apps.length) {
+      const config = {
+        apiKey: 'AIzaSyDveQD6KC3yCpfbLteFsQdpuD8nCKFiTsY',
+        authDomain: 'uaconnect-mobile.firebaseapp.com',
+        databaseURL: 'https://uaconnect-mobile.firebaseio.com',
+        projectId: 'uaconnect-mobile',
+        storageBucket: 'uaconnect-mobile.appspot.com',
+        messagingSenderId: '681918160326',
+      };
+      firebase.initializeApp(config);
+    }
   }
 
   render() {

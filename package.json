@@ -15,6 +15,7 @@
     "color": "^3.1.0",
     "core-js": "^2.5.7",
     "firebase": "^5.5.4",
+    "lodash": "^4.17.11",
     "native-base": "^2.8.1",
     "react": "^16.5.2",
     "react-native": "^0.57.3",

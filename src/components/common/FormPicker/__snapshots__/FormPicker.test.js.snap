@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormPicker /> can render selected value 1`] = `
+<Styled(Item)
+  picker={true}
+>
+  <Styled(PickerNB)
+    iosIcon={
+      <Styled(Icon)
+        color="darkred"
+        name="ios-arrow-down"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      />
+    }
+    onValueChange={[Function]}
+    placeholder="testPlaceholder"
+    renderHeader={[Function]}
+    selectedValue="item1"
+  >
+    <Item
+      label="item1"
+      value="item1"
+    />
+    <Item
+      label="item2"
+      value="item2"
+    />
+    <Item
+      label="item3"
+      value="item3"
+    />
+  </Styled(PickerNB)>
+</Styled(Item)>
+`;
+
+exports[`<FormPicker /> can render with initial state 1`] = `
+<Styled(Item)
+  picker={true}
+>
+  <Styled(PickerNB)
+    iosIcon={
+      <Styled(Icon)
+        color="darkred"
+        name="ios-arrow-down"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      />
+    }
+    onValueChange={[Function]}
+    placeholder="testPlaceholder"
+    renderHeader={[Function]}
+  >
+    <Item
+      label="item1"
+      value="item1"
+    />
+    <Item
+      label="item2"
+      value="item2"
+    />
+    <Item
+      label="item3"
+      value="item3"
+    />
+  </Styled(PickerNB)>
+</Styled(Item)>
+`;

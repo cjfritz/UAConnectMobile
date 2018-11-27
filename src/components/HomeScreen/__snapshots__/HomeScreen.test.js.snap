@@ -90,7 +90,7 @@ exports[`<Homescreen /> renders with default props 1`] = `
         iconName="ios-bookmarks"
         onPress={[Function]}
       >
-        Class
+        Course Planner
       </QuickLink>
     </Styled(ViewNB)>
     <Styled(ViewNB)

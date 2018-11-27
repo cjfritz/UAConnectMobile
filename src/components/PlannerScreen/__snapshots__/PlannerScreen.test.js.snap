@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlannerScreen /> can render list of course cards 1`] = `
+<Styled(Container)
+  style={
+    Object {
+      "justifyContent": "center",
+    }
+  }
+>
+  <LoadingModal
+    loadingLabel="Loading..."
+    visible={false}
+  />
+  <Component
+    style={
+      Object {
+        "backgroundColor": "darkred",
+        "height": "10%",
+        "width": "100%",
+      }
+    }
+  >
+    <GridNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 20,
+              }
+            }
+          >
+            Average GPA
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 18,
+              }
+            }
+          >
+            4.00
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 20,
+              }
+            }
+          >
+            Total Units
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 18,
+              }
+            }
+          >
+            4
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+    </GridNB>
+  </Component>
+  <Styled(Content)>
+    <FlatList
+      data={
+        Array [
+          Object {
+            "course": "testCourse",
+            "description": "testDescription",
+            "grade": 4,
+            "term": "testTerm",
+            "uid": "someUid",
+            "units": 4,
+          },
+        ]
+      }
+      disableVirtualization={false}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReachedThreshold={2}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      updateCellsBatchingPeriod={50}
+      windowSize={21}
+    />
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<PlannerScreen /> can render reload components on lost connection 1`] = `
+<Styled(Container)
+  style={
+    Object {
+      "justifyContent": "center",
+    }
+  }
+>
+  <LoadingModal
+    loadingLabel="Loading..."
+    visible={false}
+  />
+  <Component
+    style={
+      Object {
+        "backgroundColor": "darkred",
+        "height": "10%",
+        "width": "100%",
+      }
+    }
+  >
+    <GridNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 20,
+              }
+            }
+          >
+            Average GPA
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 18,
+              }
+            }
+          >
+            N/A
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+      <ColumnNB
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 20,
+              }
+            }
+          >
+            Total Units
+          </Styled(Text)>
+        </RowNB>
+        <RowNB
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Styled(Text)
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 18,
+              }
+            }
+          >
+            0
+          </Styled(Text)>
+        </RowNB>
+      </ColumnNB>
+    </GridNB>
+  </Component>
+  <Styled(Content)>
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Styled(Text)
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 18,
+          }
+        }
+      >
+        No Courses Found
+      </Styled(Text)>
+      <Styled(Button)
+        onPress={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "darkred",
+          }
+        }
+      >
+        <Styled(Text)
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 20,
+            }
+          }
+        >
+          Reload
+        </Styled(Text)>
+      </Styled(Button)>
+    </Component>
+  </Styled(Content)>
+</Styled(Container)>
+`;

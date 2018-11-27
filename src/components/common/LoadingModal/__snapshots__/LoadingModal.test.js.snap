@@ -17,7 +17,7 @@ exports[`<LoadingModal /> can render with visibility 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, 0.3)",
+        "backgroundColor": "rgba(0, 0, 0, 0.5)",
         "bottom": 0,
         "justifyContent": "center",
         "left": 0,
@@ -27,12 +27,11 @@ exports[`<LoadingModal /> can render with visibility 1`] = `
       }
     }
   >
-    <Styled(Spinner)
-      style={
-        Object {
-          "color": "red",
-        }
-      }
+    <Component
+      animating={true}
+      color="white"
+      hidesWhenStopped={true}
+      size="large"
     />
     <Styled(H3)
       style={
@@ -64,7 +63,7 @@ exports[`<LoadingModal /> can render with visibility and without loadingLabel 1`
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, 0.3)",
+        "backgroundColor": "rgba(0, 0, 0, 0.5)",
         "bottom": 0,
         "justifyContent": "center",
         "left": 0,
@@ -74,12 +73,11 @@ exports[`<LoadingModal /> can render with visibility and without loadingLabel 1`
       }
     }
   >
-    <Styled(Spinner)
-      style={
-        Object {
-          "color": "red",
-        }
-      }
+    <Component
+      animating={true}
+      color="white"
+      hidesWhenStopped={true}
+      size="large"
     />
     <Styled(H3)
       style={

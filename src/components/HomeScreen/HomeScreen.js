@@ -40,9 +40,9 @@ export class HomeScreen extends Component {
             <QuickLink
               iconName='ios-bookmarks'
               color='rgba(255, 255, 255, 0.90)'
-              onPress={ () => navigation.navigate('Class') }
+              onPress={ () => navigation.navigate('Planner') }
             >
-              Class
+              Course Planner
             </QuickLink>
           </View>
           <View style={ styles.Row2 }>
