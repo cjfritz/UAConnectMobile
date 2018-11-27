@@ -27,7 +27,7 @@ export const plannerValidUpdate = ({ prop, value }) => {
         return { type: PLANNER_VALID_UPDATE, payload: { prop: 'validGrade', value: true } };
       }
     case 'units':
-      if ((isNaN(value) && value !== '') || value === null || num < 0 || num > 4) {
+      if ((isNaN(value) && value !== '') || value === null || num < 0 || num > 10) {
         return { type: PLANNER_VALID_UPDATE, payload: { prop: 'validUnits', value: false } };
       } else {
         return { type: PLANNER_VALID_UPDATE, payload: { prop: 'validUnits', value: true } };
