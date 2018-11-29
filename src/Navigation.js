@@ -8,6 +8,7 @@ import Login from './components/LoginScreen/LoginScreen';
 import Home from './components/HomeScreen/HomeScreen';
 import News from './components/News/News';
 import Events from './components/Events/Events';
+import ProfileScreen from './components/ProfileScreen/ProfileScreen';
 
 const MainStack = createBottomTabNavigator({
   Home: {
@@ -18,6 +19,15 @@ const MainStack = createBottomTabNavigator({
         <Icon name='ios-home' color={ tintColor } size={ 24 } />
       ),
     },
+  },
+  Profile: {
+    screen: ProfileScreen,
+    navigationOptions: {
+      tabBarlabel: 'Profile',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name='ios-person' color={ tintColor } size={ 24 } />
+      )
+    }
   },
   News: {
     screen: News,
@@ -55,7 +65,7 @@ const RootStack = createSwitchNavigator(
     Login,
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'MainStack', // rember to change it to Login
   },
 );
 
