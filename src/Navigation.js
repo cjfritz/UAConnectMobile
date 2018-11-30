@@ -12,6 +12,7 @@ import PlannerCreateComponent from './components/PlannerCreate/PlannerCreate';
 import PlannerEditComponent from './components/PlannerEdit/PlannerEdit';
 import News from './components/News/News';
 import Events from './components/Events/Events';
+import ProfileScreen from './components/ProfileScreen/ProfileScreen';
 
 const PlannerStack = createStackNavigator(
   {
@@ -41,6 +42,15 @@ const MainStack = createBottomTabNavigator({
       tabBarlabel: 'Planner',
       tabBarIcon: ({ tintColor }) => (
         <Icon name='ios-bookmarks' color={ tintColor } size={ 24 } />
+      ),
+    },
+  },
+  Profile: {
+    screen: ProfileScreen,
+    navigationOptions: {
+      tabBarlabel: 'Profile',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name='ios-person' color={ tintColor } size={ 24 } />
       ),
     },
   },
@@ -80,6 +90,6 @@ export default createSwitchNavigator(
     Login,
   },
   {
-    initialRouteName: 'Login',
+    initialRouteName: 'MainStack', // rember to change it to Login
   },
 );
