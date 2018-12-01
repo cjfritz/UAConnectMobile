@@ -10,7 +10,7 @@ const QuickLink = ({
   onPress, children, color, iconName,
 }) => (
   <TouchableOpacity onPress={ onPress } style={ { ...styles.Touch, backgroundColor: color } }>
-    <Icon name={ iconName } style={ styles.Icon } size={ 150 } />
+    <Icon name={ iconName } style={ styles.Icon } size={ 100 } />
     <Text>
       { children }
     </Text>

@@ -25,7 +25,7 @@ exports[`<QuickLink /> renders with course plannner props 1`] = `
   <Icon
     allowFontScaling={false}
     name="ios-bookmarks"
-    size={150}
+    size={100}
     style={
       Object {
         "color": "black",
@@ -63,7 +63,7 @@ exports[`<QuickLink /> renders with event props 1`] = `
   <Icon
     allowFontScaling={false}
     name="ios-calendar"
-    size={150}
+    size={100}
     style={
       Object {
         "color": "black",
@@ -101,7 +101,7 @@ exports[`<QuickLink /> renders with news props 1`] = `
   <Icon
     allowFontScaling={false}
     name="md-paper"
-    size={150}
+    size={100}
     style={
       Object {
         "color": "black",
@@ -139,7 +139,7 @@ exports[`<QuickLink /> renders with profile props 1`] = `
   <Icon
     allowFontScaling={false}
     name="ios-person"
-    size={150}
+    size={100}
     style={
       Object {
         "color": "black",
