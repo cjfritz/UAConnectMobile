@@ -56,6 +56,7 @@ exports[`<LoginScreen /> renders with complete email and password fields 1`] = `
           Email
         </Styled(Label)>
         <Styled(Input)
+          keyboardType="email-address"
           onChangeText={[Function]}
           style={
             Object {
@@ -102,7 +103,7 @@ exports[`<LoginScreen /> renders with complete email and password fields 1`] = `
       onPress={[Function]}
       style={
         Object {
-          "alignItems": "center",
+          "alignItems": "baseline",
           "backgroundColor": "white",
           "justifyContent": "center",
           "marginLeft": "5%",
@@ -181,6 +182,7 @@ exports[`<LoginScreen /> renders with default props 1`] = `
           Email
         </Styled(Label)>
         <Styled(Input)
+          keyboardType="email-address"
           onChangeText={[Function]}
           style={
             Object {
@@ -225,7 +227,7 @@ exports[`<LoginScreen /> renders with default props 1`] = `
       onPress={[Function]}
       style={
         Object {
-          "alignItems": "center",
+          "alignItems": "baseline",
           "backgroundColor": "white",
           "justifyContent": "center",
           "marginLeft": "5%",
