@@ -14,6 +14,7 @@ import News from './components/News/News';
 import Events from './components/Events/Events';
 import ProfileScreen from './components/ProfileScreen/ProfileScreen';
 
+// navigator for course planner screen
 const PlannerStack = createStackNavigator(
   {
     Planner,
@@ -25,8 +26,9 @@ const PlannerStack = createStackNavigator(
     headerTintColor: 'white',
   }
 );
-
+// navigator for the bottom tabs
 const MainStack = createBottomTabNavigator({
+  // home tab navigator to home screen
   Home: {
     screen: Home,
     navigationOptions: {
@@ -36,6 +38,7 @@ const MainStack = createBottomTabNavigator({
       ),
     },
   },
+  // planner tab navigator to planner screen
   Planner: {
     screen: PlannerStack,
     navigationOptions: {
@@ -45,6 +48,7 @@ const MainStack = createBottomTabNavigator({
       ),
     },
   },
+  // profile tab navigator to profile screen
   Profile: {
     screen: ProfileScreen,
     navigationOptions: {
@@ -54,6 +58,7 @@ const MainStack = createBottomTabNavigator({
       ),
     },
   },
+  // news tab navigator to news screen
   News: {
     screen: News,
     navigationOptions: {
@@ -63,6 +68,7 @@ const MainStack = createBottomTabNavigator({
       ),
     },
   },
+  // events tab navigator to events screen
   Event: {
     screen: Events,
     navigationOptions: {
@@ -74,6 +80,8 @@ const MainStack = createBottomTabNavigator({
   },
 },
 {
+  // initial route set to home for tab navigator
+  // provide styling for bottom nav bar
   initialRouteName: 'Home',
   tabBarOptions: {
     activeTintColor: 'white',
@@ -83,13 +91,14 @@ const MainStack = createBottomTabNavigator({
     },
   },
 });
-
+// master navigator for the app, between loginscreen and homescreen
 export default createSwitchNavigator(
   {
     MainStack,
     Login,
   },
   {
-    initialRouteName: 'MainStack', // rember to change it to Login
+    // app initially set to start at login screen
+    initialRouteName: 'Login',
   },
 );
