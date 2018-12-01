@@ -18,3 +18,11 @@ export const PLANNER_FETCH_FAILURE = 'planner_fetch_failure';
 export const PLANNER_SAVE_FAILURE = 'planner_save_failure';
 export const PLANNER_CLEAR = 'planner_clear';
 export const PLANNER_VALID_UPDATE = 'planner_valid_update';
+
+// Profile Action creators
+export const PROFILE_UPDATE = 'profile_update';
+export const PROFILE_SAVE_SUCCESS = 'profile_save_success';
+export const PROFILE_SAVE_FAILURE = 'profile_save_failure';
+export const PROFILE_FETCH = 'profile_fetch';
+export const PROFILE_FETCH_SUCCESS = 'profile_fetch_success';
+export const PROFILE_FETCH_FAILURE = 'profile_fetch_failure';
