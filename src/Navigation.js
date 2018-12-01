@@ -12,7 +12,7 @@ import PlannerCreateComponent from './components/PlannerCreate/PlannerCreate';
 import PlannerEditComponent from './components/PlannerEdit/PlannerEdit';
 import News from './components/News/News';
 import Events from './components/Events/Events';
-import ProfileScreen from './components/ProfileScreen/ProfileScreen';
+import Profile from './components/ProfileScreen/ProfileScreen';
 
 // navigator for course planner screen
 const PlannerStack = createStackNavigator(
@@ -50,7 +50,7 @@ const MainStack = createBottomTabNavigator({
   },
   // profile tab navigator to profile screen
   Profile: {
-    screen: ProfileScreen,
+    screen: Profile,
     navigationOptions: {
       tabBarlabel: 'Profile',
       tabBarIcon: ({ tintColor }) => (

@@ -162,6 +162,7 @@ exports[`<ProfileScreen /> should render with complete fields 1`] = `
             Name
           </Styled(Label)>
           <Styled(Input)
+            keyboardType="default"
             onChangeText={[Function]}
             value="someName"
           />
@@ -175,6 +176,7 @@ exports[`<ProfileScreen /> should render with complete fields 1`] = `
             Address
           </Styled(Label)>
           <Styled(Input)
+            keyboardType="default"
             onChangeText={[Function]}
             value="someAddress"
           />
@@ -188,6 +190,7 @@ exports[`<ProfileScreen /> should render with complete fields 1`] = `
             Phone
           </Styled(Label)>
           <Styled(Input)
+            keyboardType="phone-pad"
             onChangeText={[Function]}
             value="somePhone"
           />
@@ -201,6 +204,7 @@ exports[`<ProfileScreen /> should render with complete fields 1`] = `
             Standing
           </Styled(Label)>
           <Styled(Input)
+            keyboardType="default"
             onChangeText={[Function]}
             value="someStanding"
           />
@@ -220,6 +224,7 @@ exports[`<ProfileScreen /> should render with complete fields 1`] = `
             Expected Graduation
           </Styled(Label)>
           <Styled(Input)
+            keyboardType="default"
             onChangeText={[Function]}
             value="someGraduation"
           />
@@ -392,6 +397,7 @@ exports[`<ProfileScreen /> should render with empty fields 1`] = `
             Name
           </Styled(Label)>
           <Styled(Input)
+            keyboardType="default"
             onChangeText={[Function]}
             value=""
           />
@@ -405,6 +411,7 @@ exports[`<ProfileScreen /> should render with empty fields 1`] = `
             Address
           </Styled(Label)>
           <Styled(Input)
+            keyboardType="default"
             onChangeText={[Function]}
             value=""
           />
@@ -418,6 +425,7 @@ exports[`<ProfileScreen /> should render with empty fields 1`] = `
             Phone
           </Styled(Label)>
           <Styled(Input)
+            keyboardType="phone-pad"
             onChangeText={[Function]}
             value=""
           />
@@ -431,6 +439,7 @@ exports[`<ProfileScreen /> should render with empty fields 1`] = `
             Standing
           </Styled(Label)>
           <Styled(Input)
+            keyboardType="default"
             onChangeText={[Function]}
             value=""
           />
@@ -450,6 +459,7 @@ exports[`<ProfileScreen /> should render with empty fields 1`] = `
             Expected Graduation
           </Styled(Label)>
           <Styled(Input)
+            keyboardType="default"
             onChangeText={[Function]}
           />
         </Styled(Item)>

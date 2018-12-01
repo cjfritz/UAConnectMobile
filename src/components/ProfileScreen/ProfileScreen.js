@@ -25,7 +25,6 @@ import { LoadingModal } from '../common/LoadingModal/LoadingModal';
 
 export class ProfileScreen extends Component {
   componentWillMount() {
-    console.log('ProfileScreen Mounting');
     const { fetchProfile } = this.props;
     fetchProfile();
   }
@@ -101,6 +100,7 @@ export class ProfileScreen extends Component {
       <Item floatingLabel>
         <Label>{ title }</Label>
         <Input
+          keyboardType={ propName === 'phone' ? 'phone-pad' : 'default' }
           onChangeText={ text => updateProfile({ prop: propName, value: text }) }
           value={ prop }
         />

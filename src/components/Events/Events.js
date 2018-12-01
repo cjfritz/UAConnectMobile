@@ -3,7 +3,6 @@ import { WebView, View } from 'react-native';
 import {
   Container, Button, Icon,
 } from 'native-base';
-import { NavigationEvents } from 'react-navigation';
 import styles from './Events.style';
 // constant reference to the webview to control it
 const WEBREF = 'web_ref';
@@ -39,15 +38,6 @@ class Events extends Component {
           ref={ WEBREF }
           onNavigationStateChange={ navState => {
             this.setState({ canGoBack: navState.canGoBack });
-            console.log(`canGoBack: ${canGoBack}`);
-          } }
-        />
-        <NavigationEvents
-          onWillBlur={ () => {
-            console.log('popping news screen');
-            this.setState(previousState => (
-              { key: previousState.key + 1 }
-            ));
           } }
         />
       </Container>

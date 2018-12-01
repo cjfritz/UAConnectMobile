@@ -41,8 +41,5 @@ exports[`<Events /> renders with default props 1`] = `
       }
     }
   />
-  <withNavigation(NavigationEvents)
-    onWillBlur={[Function]}
-  />
 </Styled(Container)>
 `;
