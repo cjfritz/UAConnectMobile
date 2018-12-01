@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Events /> renders with default props 1`] = `
+<Styled(Container)>
+  <Component
+    style={
+      Object {
+        "backgroundColor": "darkred",
+        "flexDirection": "row",
+        "height": "12%",
+        "width": "100%",
+      }
+    }
+  >
+    <Styled(Button)
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "marginTop": "6%",
+        }
+      }
+      transparent={true}
+    >
+      <Styled(Icon)
+        name="arrow-back"
+      />
+    </Styled(Button)>
+  </Component>
+  <WebView
+    onNavigationStateChange={[Function]}
+    originWhitelist={
+      Array [
+        "http://*",
+        "https://*",
+      ]
+    }
+    source={
+      Object {
+        "uri": "https://registrar.uark.edu/academic-dates/academic-semester-calendar/index.php",
+      }
+    }
+  />
+  <withNavigation(NavigationEvents)
+    onWillBlur={[Function]}
+  />
+</Styled(Container)>
+`;
