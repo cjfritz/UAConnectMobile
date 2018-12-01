@@ -1,53 +1,5 @@
-import firebase from 'firebase';
 import * as actions from './PlannerActions';
 import * as types from './types';
-// import firebaseMock from './FirebaseMocks';
-
-// jest.mock('firebase', () => {
-//   return firebaseMock;
-// });
-
-// const ref = jest.fn();
-
-// const ref = jest.fn(url => {
-//   return {
-//     on: () => jest.fn(),
-//   };
-// });
-
-jest.spyOn(firebase, 'initializeApp')
-  .mockImplementation(() => {
-    return {
-      auth: () => {
-        return jest.fn();
-      },
-      database: () => {
-        return jest.fn();
-      },
-    };
-  });
-
-jest.spyOn(firebase, 'auth').mockImplementation(() => {
-  return {
-    currentUser: {
-      displayName: 'testDisplayName',
-      email: 'test@test.com',
-      emailVerified: true,
-    },
-  };
-});
-
-jest.spyOn(firebase, 'database').mockImplementation(() => {
-  return {
-    ref: () => jest.fn().mockImplementation(() => {
-      return {
-        on: () => jest.fn().mockImplementation(() => {
-          return true;
-        }),
-      };
-    }),
-  };
-});
 
 describe('synchronous course planner action creators', () => {
   it('can dispatch clear action correctly', () => {
@@ -136,38 +88,3 @@ describe('plannerValidUpdate action creator', () => {
     });
   });
 });
-
-// describe('course planner fetch action creator', () => {
-//   beforeEach(() => {
-//     jest.useFakeTimers();
-//   });
-
-//   it('can properly fetch course data', async () => {
-//     // jest.mock('firebase');
-//     expect.assertions(3);
-//     const mockDispatch = jest.fn();
-//     const fetch = actions.plannerFetch();
-//     const course = {
-//       course: 'CSCE 1212',
-//       description: 'Programming Class',
-//       grade: 3.5,
-//       term: 'Fall 2018',
-//       units: 3,
-//     };
-
-//     // const database = firebase.database.mockImplementation(() => jest.fn());
-//     // const ref = database.ref.mockImplementation(() => jest.fn());
-//     // const on = ref.on.mockImplementation(() => jest.fn());
-
-//     // firebase.database.ref.on.mockImplementation(() => {
-//     //   return jest.fn();
-//     // });
-
-//     fetch(mockDispatch);
-//     expect(mockDispatch.mock.calls[0][0]).toEqual({ type: types.PLANNER_FETCH });
-//     jest.clearAllTimers();
-//     expect(firebase.auth).toHaveBeenCalled();
-//     expect(firebase.database.ref.on).toHaveBeenCalled();
-//     // expect(firebase.database.ref.on).toHaveBeenCalled();
-//   });
-// });
