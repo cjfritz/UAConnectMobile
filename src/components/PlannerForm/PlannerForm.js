@@ -12,12 +12,18 @@ export class PlannerForm extends Component {
   // function to parse course and description from app state
   getCourseAndDescription = () => {
     const { course, description } = this.props;
+    if (course === '' || description === '') {
+      return '';
+    }
     return `${course} - ${description}`;
   };
 
   // function to parse term type from app state
   getTermType = () => {
     const { term } = this.props;
+    if (term === '') {
+      return '';
+    }
     const termSplit = term.split(' - ');
     return termSplit[0];
   };
@@ -25,6 +31,9 @@ export class PlannerForm extends Component {
   // function to parse term year from app state
   getTermYear = () => {
     const { term } = this.props;
+    if (term === '') {
+      return '';
+    }
     const termSplit = term.split(' - ');
     return termSplit[1];
   };
@@ -32,11 +41,18 @@ export class PlannerForm extends Component {
   // function used to parse and dispatch actions to update state for course and description changes
   setCourseAndDescription = value => {
     const { updatePlannerForm, updateValidFields } = this.props;
-    const split = value.split(' - ');
-    updatePlannerForm({ prop: 'course', value: split[0] });
-    updateValidFields({ prop: 'course', value: split[0] });
-    updatePlannerForm({ prop: 'description', value: split[1] });
-    updateValidFields({ prop: 'description', value: split[1] });
+    if (value === '') {
+      updatePlannerForm({ prop: 'course', value: '' });
+      updateValidFields({ prop: 'course', value: '' });
+      updatePlannerForm({ prop: 'description', value: '' });
+      updateValidFields({ prop: 'description', value: '' });
+    } else {
+      const split = value.split(' - ');
+      updatePlannerForm({ prop: 'course', value: split[0] });
+      updateValidFields({ prop: 'course', value: split[0] });
+      updatePlannerForm({ prop: 'description', value: split[1] });
+      updateValidFields({ prop: 'description', value: split[1] });
+    }
   };
 
   // function used to parse and dispatch actions to update state for term type changes

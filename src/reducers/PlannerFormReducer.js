@@ -20,7 +20,7 @@ export const getTermYearRange = () => {
 const INITIAL_STATE = {
   course: '',
   description: '',
-  term: '',
+  term: ' - ',
   grade: '',
   units: '',
   validFields: {

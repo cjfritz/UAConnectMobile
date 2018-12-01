@@ -19,6 +19,8 @@ export const plannerClear = () => (
 // dispatch action that verifies input from planner form
 export const plannerValidUpdate = ({ prop, value }) => {
   const num = parseFloat(value).toFixed(2);
+  let termType;
+  let termYear;
   switch (prop) {
     case 'grade':
       if ((isNaN(value) && value !== '') || value === null || num < 0 || num > 4) {
@@ -31,6 +33,13 @@ export const plannerValidUpdate = ({ prop, value }) => {
         return { type: PLANNER_VALID_UPDATE, payload: { prop: 'validUnits', value: false } };
       } else {
         return { type: PLANNER_VALID_UPDATE, payload: { prop: 'validUnits', value: true } };
+      }
+    case 'term':
+      [termType, termYear] = value.split(' - ');
+      if (!termType || termType === '' || termYear === '' || !termYear) {
+        return { type: PLANNER_VALID_UPDATE, payload: { prop: `valid${prop.charAt(0).toUpperCase() + prop.slice(1)}`, value: false } };
+      } else {
+        return { type: PLANNER_VALID_UPDATE, payload: { prop: `valid${prop.charAt(0).toUpperCase() + prop.slice(1)}`, value: true } };
       }
     default:
       if (value === null || value === '') {

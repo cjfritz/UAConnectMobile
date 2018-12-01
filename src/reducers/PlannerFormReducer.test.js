@@ -5,7 +5,7 @@ import { mockCourses, terms } from '../assets/fixtures/FormFixtures';
 const INITIAL_STATE = {
   course: '',
   description: '',
-  term: '',
+  term: ' - ',
   grade: '',
   units: '',
   validFields: {

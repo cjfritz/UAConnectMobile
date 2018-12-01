@@ -35,26 +35,37 @@ const FormPicker = ({
         </Header>
       ) }
     >
-      { androidRenderPlaceholder() }
-      {
-      items.map((value, index) => (
-        <Picker.Item
-          label={ value }
-          value={ value }
-          // require a key to be used, so make it the index
-          key={ index } // eslint-disable-line react/no-array-index-key
-        />
-      ))
-    }
+      { renderChildren(items) }
     </Picker>
   </Item>
 );
 
-const androidRenderPlaceholder = () => {
+const renderChildren = items => {
   if (Platform.OS === 'android') {
-    return <Picker.Item label='Select Item' value='' />
+    return (
+      [
+        <Picker.Item label='Select Item' value='' />,
+        items.map((value, index) => (
+          <Picker.Item
+            label={ value }
+            value={ value }
+            // require a key to be used, so make it the index
+            key={ index } // eslint-disable-line react/no-array-index-key
+          />
+        )),
+      ]
+    );
   }
-  return null;
+  return (
+    items.map((value, index) => (
+      <Picker.Item
+        label={ value }
+        value={ value }
+        // require a key to be used, so make it the index
+        key={ index } // eslint-disable-line react/no-array-index-key
+      />
+    ))
+  );
 };
 
 // export the component

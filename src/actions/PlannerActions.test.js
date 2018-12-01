@@ -66,6 +66,46 @@ describe('plannerValidUpdate action creator', () => {
     });
   });
 
+  it('can dispatch correction action with correct payload for valid term', () => {
+    const payload = {
+      prop: 'term',
+      value: 'Fall Semester - 2018',
+    };
+    expect(actions.plannerValidUpdate(payload)).toEqual({
+      type: types.PLANNER_VALID_UPDATE,
+      payload: { prop: 'validTerm', value: true },
+    });
+  });
+
+  it('can dispatch correction action with correct payload for invalid term', () => {
+    let payload = {
+      prop: 'term',
+      value: ' - 2018',
+    };
+    expect(actions.plannerValidUpdate(payload)).toEqual({
+      type: types.PLANNER_VALID_UPDATE,
+      payload: { prop: 'validTerm', value: false },
+    });
+
+    payload = {
+      prop: 'term',
+      value: 'Fall Semester - ',
+    };
+    expect(actions.plannerValidUpdate(payload)).toEqual({
+      type: types.PLANNER_VALID_UPDATE,
+      payload: { prop: 'validTerm', value: false },
+    });
+
+    payload = {
+      prop: 'term',
+      value: ' - ',
+    };
+    expect(actions.plannerValidUpdate(payload)).toEqual({
+      type: types.PLANNER_VALID_UPDATE,
+      payload: { prop: 'validTerm', value: false },
+    });
+  });
+
   it('can dispatch correct action with correct payload for invalid anything else', () => {
     const payload = {
       prop: 'course',
