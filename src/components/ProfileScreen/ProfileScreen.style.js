@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'; 
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   cardContainer: {
@@ -20,7 +20,6 @@ export default StyleSheet.create({
     paddingBottom: 20,
     paddingTop: 35,
   },
-  headerContainer: {},
   headerColumn: {
     alignItems: 'center',
     backgroundColor: 'transparent',
@@ -28,6 +27,10 @@ export default StyleSheet.create({
   placeIcon: {
     color: 'white',
     fontSize: 26,
+  },
+  saveButton: {
+    alignSelf: 'center',
+    backgroundColor: 'white',
   },
   scroll: {
     backgroundColor: '#FFF',
@@ -43,14 +46,16 @@ export default StyleSheet.create({
   },
   userCityRow: {
     backgroundColor: 'transparent',
+    paddingBottom: '2%',
   },
   userCityText: {
-    color: '#A5A5A5',
+    color: 'white',
     fontSize: 15,
     fontWeight: '600',
     textAlign: 'center',
   },
   userImage: {
+    backgroundColor: 'white',
     borderColor: 'black',
     borderRadius: 85,
     borderWidth: 3,
