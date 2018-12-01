@@ -12,11 +12,11 @@ import {
   PLANNER_VALID_UPDATE,
 } from './types';
 import NavigationService from '../NavigationService';
-
+// dispatch action to clear the planner form upon leaving
 export const plannerClear = () => (
   { type: PLANNER_CLEAR }
 );
-
+// dispatch action that verifies input from planner form
 export const plannerValidUpdate = ({ prop, value }) => {
   const num = parseFloat(value).toFixed(2);
   switch (prop) {
@@ -40,11 +40,11 @@ export const plannerValidUpdate = ({ prop, value }) => {
       }
   }
 };
-
+// dispatch action to update a general prop with action
 export const plannerUpdate = ({ prop, value }) => (
   { type: PLANNER_UPDATE, payload: { prop, value } }
 );
-
+// dispatch action to fetch course planner info from firebase
 export const plannerFetch = () => dispatch => {
   dispatch({ type: PLANNER_FETCH });
   const timeout = setTimeout(() => dispatch({ type: PLANNER_FETCH_FAILURE }), 5000);
@@ -55,7 +55,7 @@ export const plannerFetch = () => dispatch => {
       dispatch({ type: PLANNER_FETCH_SUCCESS, payload: snapshot.val() });
     });
 };
-
+// dispatch action to create new course entry in firebase, and update app state
 export const plannerCreate = ({
   course,
   description,
@@ -82,7 +82,7 @@ export const plannerCreate = ({
       });
   };
 };
-
+// dispatch action to save changes to a course in firebase and app state
 export const plannerSave = ({
   uid,
   course,
@@ -106,7 +106,7 @@ export const plannerSave = ({
       });
   };
 };
-
+// dispatch action to delete course from firebase and app state
 export const plannerDelete = uid => {
   const { currentUser } = firebase.auth();
   return () => {

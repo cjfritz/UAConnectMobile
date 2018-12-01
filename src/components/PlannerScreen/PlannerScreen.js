@@ -10,8 +10,9 @@ import CourseCard from '../common/CourseCard/CourseCard';
 import { plannerFetch } from '../../actions/PlannerActions';
 import { LoadingModal } from '../common/LoadingModal/LoadingModal';
 import styles from './PlannerScreen.style';
-
+// component to display planner screen
 export class PlannerScreen extends Component {
+  // show navigation heade with add course option
   static navigationOptions = ({ navigation }) => (
     {
       title: 'Course Planner',
@@ -30,11 +31,13 @@ export class PlannerScreen extends Component {
     }
   );
 
+  // on component mount, fetch the data from firebase
   componentWillMount() {
     const { firebasePlannerFetch } = this.props;
     firebasePlannerFetch();
   }
 
+  // render all the necessary course cards
   renderItem = item => {
     const { navigation } = this.props;
     return (
@@ -42,11 +45,13 @@ export class PlannerScreen extends Component {
     );
   };
 
+  // on reload button press, fetch coures info again from firebase
   onReload = () => {
     const { firebasePlannerFetch } = this.props;
     firebasePlannerFetch();
   };
 
+  // render the list for the course screen to show courses
   renderList = () => {
     const { planner, loading } = this.props;
     if (!loading && planner.length !== 0) {
@@ -72,6 +77,7 @@ export class PlannerScreen extends Component {
     return null;
   };
 
+  // calculate average GPA to show in the header
   getAverageGPA = () => {
     const { planner } = this.props;
     let gradeCounter = 0;
@@ -87,6 +93,7 @@ export class PlannerScreen extends Component {
     return (gradeTotal / gradeCounter).toFixed(2);
   };
 
+  // calculate total units to show in the header
   getTotalUnits = () => {
     const { planner } = this.props;
     const unitTotal = reduce(planner, (sum, item) => {
@@ -100,7 +107,9 @@ export class PlannerScreen extends Component {
     return unitTotal;
   };
 
+  // render the course planner screen
   render() {
+    // desctructure props and data needed to render
     const { loading } = this.props;
     const averageGPA = this.getAverageGPA();
     const totalUnits = this.getTotalUnits();
@@ -134,13 +143,13 @@ export class PlannerScreen extends Component {
     );
   }
 }
-
+// map action creators to component props
 const mapDispatchToProps = dispatch => (
   {
     firebasePlannerFetch: () => dispatch(plannerFetch()),
   }
 );
-
+// map app state to component props
 const mapStateToProps = state => {
   const { loading, courses } = state.planner;
   const planner = map(courses, (val, uid) => (
@@ -148,5 +157,5 @@ const mapStateToProps = state => {
   ));
   return { planner, loading };
 };
-
+// export component to be used
 export default connect(mapStateToProps, mapDispatchToProps)(PlannerScreen);

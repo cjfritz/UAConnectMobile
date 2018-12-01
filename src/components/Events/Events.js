@@ -5,15 +5,14 @@ import {
 } from 'native-base';
 import { NavigationEvents } from 'react-navigation';
 import styles from './Events.style';
-
+// constant reference to the webview to control it
 const WEBREF = 'web_ref';
-
+// component that shows the events webview
 class Events extends Component {
   constructor() {
     super();
     this.state = {
       canGoBack: false,
-      key: 1,
     };
   }
 
@@ -24,8 +23,10 @@ class Events extends Component {
     this.refs[WEBREF].goBack();
   };
 
+  // function to render the webview
   render() {
-    const { key, canGoBack } = this.state;
+    // desconstruct app state
+    const { canGoBack } = this.state;
     return (
       <Container>
         <View style={ styles.headerView }>
@@ -36,7 +37,6 @@ class Events extends Component {
         <WebView
           source={ { uri: 'https://registrar.uark.edu/academic-dates/academic-semester-calendar/index.php' } }
           ref={ WEBREF }
-          key={ key }
           onNavigationStateChange={ navState => {
             this.setState({ canGoBack: navState.canGoBack });
             console.log(`canGoBack: ${canGoBack}`);
@@ -54,6 +54,6 @@ class Events extends Component {
     );
   }
 }
-
+// export the events screen
 export default Events;
 

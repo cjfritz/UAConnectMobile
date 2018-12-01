@@ -11,9 +11,10 @@ import { logoutUser } from '../../actions/AuthActions';
 import styles from './HomeScreen.style';
 import { LoadingModal } from '../common/LoadingModal/LoadingModal';
 import QuickLink from '../common/QuickLink/QuickLink';
-
+// component to show the homescreen
 export class HomeScreen extends Component {
   render() {
+    // deconstruct the props from this.props
     const { userLoggedOut, loading, navigation } = this.props;
     return (
       <View style={ styles.Container }>
@@ -66,17 +67,18 @@ export class HomeScreen extends Component {
     );
   }
 }
+// map the action creators to component props
 const mapDispatchToProps = dispatch => (
   ({
     userLoggedOut: () => dispatch(logoutUser()),
   })
 );
-
+// map the app state to component props
 const mapStateToProps = state => {
   const { loading } = state.auth;
 
   return { loading };
 };
-
+// export the homescreen component
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
 

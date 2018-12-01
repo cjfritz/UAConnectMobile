@@ -13,7 +13,6 @@ class News extends Component {
     super();
     this.state = {
       canGoBack: false,
-      key: 1,
     };
   }
 
@@ -25,7 +24,7 @@ class News extends Component {
   };
 
   render() {
-    const { key, canGoBack } = this.state;
+    const { canGoBack } = this.state;
     return (
       <Container>
         <View style={ styles.headerView }>
@@ -36,7 +35,6 @@ class News extends Component {
         <WebView
           source={ { uri: 'https://news.uark.edu' } }
           ref={ WEBREF }
-          key={ key }
           onNavigationStateChange={ navState => {
             this.setState({ canGoBack: navState.canGoBack });
             console.log(`canGoBack: ${canGoBack}`);

@@ -10,7 +10,7 @@ import {
   plannerUpdate, plannerSave, plannerDelete, plannerValidUpdate,
 } from '../../actions/PlannerActions';
 import styles from './PlannerEdit.style';
-
+// component to generate planner edit screen
 export class PlannerEdit extends Component {
   static navigationOptions = {
     title: 'Edit Course',
@@ -22,6 +22,7 @@ export class PlannerEdit extends Component {
     },
   };
 
+  // on component mount, populate each field with values of selected course
   componentWillMount() {
     const { navigation, coursePlannerUpdate, updateValidFields } = this.props;
     const courseItem = navigation.getParam('courseItem', {});
@@ -31,6 +32,7 @@ export class PlannerEdit extends Component {
     });
   }
 
+  // bring up save dialog on save button press
   onSave = () => {
     Alert.alert(
       'Save Changes?',
@@ -42,6 +44,7 @@ export class PlannerEdit extends Component {
     );
   };
 
+  // dispatch save action on save dialog confirm button press
   onConfirmSave = () => {
     const {
       course,
@@ -63,6 +66,7 @@ export class PlannerEdit extends Component {
     });
   };
 
+  // bring up delete dialog on delete button press
   onDelete = () => {
     Alert.alert(
       'Delete Course?',
@@ -74,11 +78,13 @@ export class PlannerEdit extends Component {
     );
   };
 
+  // dispatch delete action on delete dialog confirm press
   onConfirmDelete = () => {
     const { coursePlannerDelete, navigation } = this.props;
     coursePlannerDelete(navigation.getParam('courseItem', {}).uid);
   };
 
+  // disable save button on invalid fields
   isValid = () => {
     const { validFields } = this.props;
     const {
@@ -96,6 +102,7 @@ export class PlannerEdit extends Component {
     }
   };
 
+  // render the component
   render() {
     return (
       <Container>
@@ -107,7 +114,11 @@ export class PlannerEdit extends Component {
                 Delete
               </H3>
             </Button>
-            <Button disabled={ !this.isValid() } style={ styles.saveButton } onPress={ () => this.onSave() }>
+            <Button
+              disabled={ !this.isValid() }
+              style={ this.isValid() ? styles.saveButton : { ...styles.saveButton, backgroundColor: 'gray' } }
+              onPress={ () => this.onSave() }
+            >
               <H3 style={ styles.saveText }>
                 Save
               </H3>
@@ -118,7 +129,7 @@ export class PlannerEdit extends Component {
     );
   }
 }
-
+// map action creators to component props
 const mapDispatchToProps = dispatch => (
   ({
     coursePlannerUpdate: ({ prop, value }) => dispatch(plannerUpdate({ prop, value })),
@@ -141,7 +152,7 @@ const mapDispatchToProps = dispatch => (
     updateValidFields: ({ prop, value }) => dispatch(plannerValidUpdate({ prop, value })),
   })
 );
-
+// map app state to component props
 const mapStateToProps = state => {
   const {
     course,
@@ -160,5 +171,5 @@ const mapStateToProps = state => {
     validFields,
   };
 };
-
+// export the planner edit screen
 export default connect(mapStateToProps, mapDispatchToProps)(PlannerEdit);
