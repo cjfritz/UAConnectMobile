@@ -1,5 +1,5 @@
 import {
-  PROFILE_UPDATE, PROFILE_FETCH, PROFILE_FETCH_SUCCESS, PROFILE_SAVE_FAILURE,
+  PROFILE_UPDATE, PROFILE_FETCH, PROFILE_FETCH_SUCCESS, PROFILE_FETCH_FAILURE,
 } from '../actions/types';
 // initial state for profile state
 const INITIAL_STATE = {
@@ -23,7 +23,7 @@ export default (state = INITIAL_STATE, action) => {
     case PROFILE_FETCH_SUCCESS:
       return { ...action.payload, loading: false };
     // return current state and set loading false for fetch failure
-    case PROFILE_SAVE_FAILURE:
+    case PROFILE_FETCH_FAILURE:
       return { ...state, loading: false };
     // return current state on unkown action
     default:
