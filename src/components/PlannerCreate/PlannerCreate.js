@@ -12,7 +12,7 @@ import styles from './PlannerCreate.style';
 // component to show the PlannerForm and a create button
 export class PlannerCreate extends Component {
   static navigationOptions = {
-    title: 'Planner Create',
+    title: 'Create Course',
     headerStyle: {
       backgroundColor: 'darkred',
     },
