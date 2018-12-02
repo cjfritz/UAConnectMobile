@@ -29,13 +29,6 @@ export class ProfileScreen extends Component {
     fetchProfile();
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { fetchProfile, isFocused } = this.props;
-    if (nextProps.isFocused && !isFocused) {
-      fetchProfile();
-    }
-  }
-
   renderHeader = () => {
     const {
       name,

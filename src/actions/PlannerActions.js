@@ -12,6 +12,7 @@ import {
   PLANNER_VALID_UPDATE,
 } from './types';
 import NavigationService from '../NavigationService';
+import { showToast } from '../components/common/showToast';
 // dispatch action to clear the planner form upon leaving
 export const plannerClear = () => (
   { type: PLANNER_CLEAR }
@@ -56,7 +57,9 @@ export const plannerUpdate = ({ prop, value }) => (
 // dispatch action to fetch course planner info from firebase
 export const plannerFetch = () => dispatch => {
   dispatch({ type: PLANNER_FETCH });
-  const timeout = setTimeout(() => dispatch({ type: PLANNER_FETCH_FAILURE }), 5000);
+  const timeout = setTimeout(() => {
+    dispatch({ type: PLANNER_FETCH_FAILURE });
+  }, 5000);
   const { currentUser } = firebase.auth();
   firebase.database().ref(`/users/${currentUser.uid}/planner`)
     .on('value', snapshot => {
@@ -73,6 +76,7 @@ export const plannerCreate = ({
   units,
 }) => {
   const { currentUser } = firebase.auth();
+  showToast('Course created', 3000, 'top', 'success');
   return dispatch => {
     firebase.database().ref(`/users/${currentUser.uid}/planner`)
       .push({
@@ -84,11 +88,12 @@ export const plannerCreate = ({
       })
       .then(() => {
         dispatch({ type: PLANNER_CREATE });
-        NavigationService.back();
       })
       .catch(error => {
         console.log(error);
+        showToast('Could not create course', 3000, 'top', 'danger');
       });
+    NavigationService.back();
   };
 };
 // dispatch action to save changes to a course in firebase and app state
@@ -102,30 +107,34 @@ export const plannerSave = ({
 }) => {
   const { currentUser } = firebase.auth();
   return dispatch => {
+    showToast('Course saved', 3000, 'top', 'success');
     firebase.database().ref(`/users/${currentUser.uid}/planner/${uid}`)
       .set({
         course, description, term, grade, units,
       }).then(() => {
         dispatch({ type: PLANNER_SAVE_SUCCESS });
-        NavigationService.back();
       })
       .catch(error => {
+        showToast('Could not save course', 3000, 'top', 'danger');
         dispatch({ type: PLANNER_SAVE_FAILURE });
         console.log(error);
       });
+    NavigationService.back();
   };
 };
 // dispatch action to delete course from firebase and app state
 export const plannerDelete = uid => {
   const { currentUser } = firebase.auth();
+  showToast('Course deleted', 3000, 'top', 'success');
   return () => {
     firebase.database().ref(`/users/${currentUser.uid}/planner/${uid}`)
       .remove()
       .then(() => {
-        NavigationService.back();
       })
       .catch(error => {
+        showToast('Could not delete course', 3000, 'top', 'danger');
         console.log(error);
       });
+    NavigationService.back();
   };
 };

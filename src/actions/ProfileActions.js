@@ -20,13 +20,13 @@ export const profileSave = ({
 }) => {
   // get current user logged in this session
   const { currentUser } = firebase.auth();
+  showToast('Profile changes saved', 3000, 'top', 'success');
   // do this to not have to return an action, just call firebase
   return dispatch => {
     firebase.database().ref(`/users/${currentUser.uid}/profile/`)
       .set({
         name, address, phone, standing, expectedGraduation,
       }).then(() => {
-        showToast('Changes saved', 3000, 'top', 'success');
       })
       .catch(error => {
         showToast('Could not save profile changes', 3000, 'top', 'danger');
@@ -43,7 +43,7 @@ export const profileFetch = () => dispatch => {
   }, 5000);
   const { currentUser } = firebase.auth();
   firebase.database().ref(`/users/${currentUser.uid}/profile`)
-    .once('value', snapshot => {
+    .on('value', snapshot => {
       clearTimeout(timeout);
       dispatch({ type: PROFILE_FETCH_SUCCESS, payload: snapshot.val() });
     });

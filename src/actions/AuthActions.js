@@ -68,7 +68,7 @@ export const loginUserSuccess = (dispatch, user) => {
 };
 // dispatches login failure
 export const loginUserFailed = dispatch => {
-  showToast('Invalid Email/Password', 3000, 'top', 'danger');
+  showToast('Invalid credentials or lost connection', 3000, 'top', 'danger');
   dispatch({ type: LOGIN_USER_FAIL });
   // stay in the login screen
   NavigationService.navigate('Login');
