@@ -50,9 +50,9 @@ export class HomeScreen extends Component {
             <QuickLink
               iconName='ios-calendar'
               color='rgba(255, 255, 255, 0.90)'
-              onPress={ () => navigation.navigate('Event') }
+              onPress={ () => navigation.navigate('Events') }
             >
-              Event
+              Events
             </QuickLink>
             <QuickLink
               iconName='md-paper'

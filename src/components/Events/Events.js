@@ -34,7 +34,7 @@ class Events extends Component {
           </Button>
         </View>
         <WebView
-          source={ { uri: 'https://registrar.uark.edu/academic-dates/academic-semester-calendar/index.php' } }
+          source={ { uri: 'https://calendars.uark.edu/EventList.aspx?fromdate=12%2f2%2f2018&todate=12%2f2%2f2018&display=Day&view=DateTime' } }
           ref={ WEBREF }
           onNavigationStateChange={ navState => {
             this.setState({ canGoBack: navState.canGoBack });

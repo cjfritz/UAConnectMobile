@@ -37,7 +37,7 @@ exports[`<Events /> renders with default props 1`] = `
     }
     source={
       Object {
-        "uri": "https://registrar.uark.edu/academic-dates/academic-semester-calendar/index.php",
+        "uri": "https://calendars.uark.edu/EventList.aspx?fromdate=12%2f2%2f2018&todate=12%2f2%2f2018&display=Day&view=DateTime",
       }
     }
   />

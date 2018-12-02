@@ -69,7 +69,7 @@ const MainStack = createBottomTabNavigator({
     },
   },
   // events tab navigator to events screen
-  Event: {
+  Events: {
     screen: Events,
     navigationOptions: {
       tabBarlabel: 'Events',
