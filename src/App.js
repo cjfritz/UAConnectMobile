@@ -28,6 +28,7 @@ export default class App extends Component {
     YellowBox.ignoreWarnings([
       'Setting a timer',
       'Warning: Functions are not valid',
+      '',
     ]);
   }
 

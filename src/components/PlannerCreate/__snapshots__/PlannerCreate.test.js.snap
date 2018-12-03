@@ -11,7 +11,7 @@ exports[`<PlannerCreate /> can render with empty, invalid props 1`] = `
         Object {
           "alignItems": "center",
           "alignSelf": "center",
-          "backgroundColor": "darkred",
+          "backgroundColor": "gray",
           "justifyContent": "center",
           "marginTop": "5%",
           "width": "40%",
@@ -43,7 +43,7 @@ exports[`<PlannerCreate /> can render with invalid text for grade and units prop
         Object {
           "alignItems": "center",
           "alignSelf": "center",
-          "backgroundColor": "darkred",
+          "backgroundColor": "gray",
           "justifyContent": "center",
           "marginTop": "5%",
           "width": "40%",
@@ -75,7 +75,7 @@ exports[`<PlannerCreate /> can render with invalid values greater than max range
         Object {
           "alignItems": "center",
           "alignSelf": "center",
-          "backgroundColor": "darkred",
+          "backgroundColor": "gray",
           "justifyContent": "center",
           "marginTop": "5%",
           "width": "40%",
@@ -107,7 +107,7 @@ exports[`<PlannerCreate /> can render with invalid values less than min range fo
         Object {
           "alignItems": "center",
           "alignSelf": "center",
-          "backgroundColor": "darkred",
+          "backgroundColor": "gray",
           "justifyContent": "center",
           "marginTop": "5%",
           "width": "40%",

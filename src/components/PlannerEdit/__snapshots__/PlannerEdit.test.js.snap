@@ -41,7 +41,7 @@ exports[`<PlannerEdit /> can render with empty, invalid props 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "white",
+            "backgroundColor": "gray",
             "justifyContent": "center",
             "width": "40%",
           }
@@ -103,7 +103,7 @@ exports[`<PlannerEdit /> can render with invalid text for grade and units props 
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "white",
+            "backgroundColor": "gray",
             "justifyContent": "center",
             "width": "40%",
           }
@@ -165,7 +165,7 @@ exports[`<PlannerEdit /> can render with invalid values greater than max range f
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "white",
+            "backgroundColor": "gray",
             "justifyContent": "center",
             "width": "40%",
           }
@@ -227,7 +227,7 @@ exports[`<PlannerEdit /> can render with invalid values less than min range for 
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "white",
+            "backgroundColor": "gray",
             "justifyContent": "center",
             "width": "40%",
           }

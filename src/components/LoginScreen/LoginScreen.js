@@ -35,6 +35,7 @@ export class LoginScreen extends Component {
             <Item style={ styles.item } floatingLabel>
               <Label style={ { color: 'white' } }>Email</Label>
               <Input
+                keyboardType='email-address'
                 style={ styles.input }
                 onChangeText={ text => onEmailChange(text) }
                 value={ email }

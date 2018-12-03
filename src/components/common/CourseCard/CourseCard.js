@@ -3,14 +3,16 @@ import {
   Card, CardItem, Text, Button, Body, Grid, Row, Col,
 } from 'native-base';
 import styles from './CourseCard.style';
-
+// common component to render the course card
 export default class CourseCard extends Component {
   onEdit = () => {
     const { courseItem, navigation } = this.props;
     navigation.navigate('PlannerEditComponent', { courseItem });
   };
 
+  // render the coures card
   render() {
+    // extract props from this.props
     const { courseItem } = this.props;
     const {
       course,
@@ -19,6 +21,7 @@ export default class CourseCard extends Component {
       grade,
       units,
     } = courseItem;
+    // return what is to be rendered
     return (
       <Card>
         <CardItem style={ styles.headerContainer } header bordered>

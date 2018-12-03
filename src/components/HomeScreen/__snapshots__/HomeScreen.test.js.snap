@@ -107,7 +107,7 @@ exports[`<Homescreen /> renders with default props 1`] = `
         iconName="ios-calendar"
         onPress={[Function]}
       >
-        Event
+        Events
       </QuickLink>
       <QuickLink
         color="rgba(255, 255, 255, 0.90)"

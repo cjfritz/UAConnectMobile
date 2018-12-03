@@ -9,10 +9,10 @@ import {
   plannerCreate, plannerClear, plannerValidUpdate,
 } from '../../actions/PlannerActions';
 import styles from './PlannerCreate.style';
-
+// component to show the PlannerForm and a create button
 export class PlannerCreate extends Component {
   static navigationOptions = {
-    title: 'Planner Create',
+    title: 'Create Course',
     headerStyle: {
       backgroundColor: 'darkred',
     },
@@ -21,6 +21,7 @@ export class PlannerCreate extends Component {
     },
   };
 
+  // on mount, clear the planner form and set fields to invalid
   componentWillMount() {
     const { clearForm, updateValidFields } = this.props;
     const propsToSetInvalid = [
@@ -36,6 +37,7 @@ export class PlannerCreate extends Component {
     });
   }
 
+  // show confirm creation alert
   onCreate = () => {
     Alert.alert(
       'Create Course?',
@@ -47,6 +49,7 @@ export class PlannerCreate extends Component {
     );
   };
 
+  // dispatch action to create course on alert confirm
   onConfirmCreate = () => {
     const {
       course,
@@ -65,6 +68,7 @@ export class PlannerCreate extends Component {
     });
   };
 
+  // disable the create button when necessary
   isValid = () => {
     const { validFields } = this.props;
     const {
@@ -82,12 +86,17 @@ export class PlannerCreate extends Component {
     }
   };
 
+  // render the create screen
   render() {
     return (
       <Container>
         <Content>
           <PlannerFormComponent />
-          <Button disabled={ !this.isValid() } style={ styles.createButton } onPress={ () => this.onCreate() }>
+          <Button
+            disabled={ !this.isValid() }
+            style={ this.isValid() ? styles.createButton : { ...styles.createButton, backgroundColor: 'gray' } }
+            onPress={ () => this.onCreate() }
+          >
             <H3 style={ styles.createText }>
               Create Course
             </H3>
@@ -98,6 +107,7 @@ export class PlannerCreate extends Component {
   }
 }
 
+// map action creators to component props
 const mapDispatchToProps = dispatch => (
   ({
     coursePlannerCreate: ({
@@ -118,6 +128,7 @@ const mapDispatchToProps = dispatch => (
   })
 );
 
+// map app state to component props
 const mapStateToProps = state => {
   const {
     course,

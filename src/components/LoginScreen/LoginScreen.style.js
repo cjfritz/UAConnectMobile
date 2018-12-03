@@ -14,7 +14,7 @@ export default StyleSheet.create({
     marginRight: '5%',
   },
   loginButton: {
-    alignItems: 'center',
+    alignItems: 'baseline',
     backgroundColor: 'white',
     justifyContent: 'center',
     marginLeft: '5%',

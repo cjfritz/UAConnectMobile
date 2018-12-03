@@ -12,7 +12,9 @@ import PlannerCreateComponent from './components/PlannerCreate/PlannerCreate';
 import PlannerEditComponent from './components/PlannerEdit/PlannerEdit';
 import News from './components/News/News';
 import Events from './components/Events/Events';
+import Profile from './components/ProfileScreen/ProfileScreen';
 
+// navigator for course planner screen
 const PlannerStack = createStackNavigator(
   {
     Planner,
@@ -24,8 +26,9 @@ const PlannerStack = createStackNavigator(
     headerTintColor: 'white',
   }
 );
-
+// navigator for the bottom tabs
 const MainStack = createBottomTabNavigator({
+  // home tab navigator to home screen
   Home: {
     screen: Home,
     navigationOptions: {
@@ -35,6 +38,7 @@ const MainStack = createBottomTabNavigator({
       ),
     },
   },
+  // planner tab navigator to planner screen
   Planner: {
     screen: PlannerStack,
     navigationOptions: {
@@ -44,6 +48,17 @@ const MainStack = createBottomTabNavigator({
       ),
     },
   },
+  // profile tab navigator to profile screen
+  Profile: {
+    screen: Profile,
+    navigationOptions: {
+      tabBarlabel: 'Profile',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name='ios-person' color={ tintColor } size={ 24 } />
+      ),
+    },
+  },
+  // news tab navigator to news screen
   News: {
     screen: News,
     navigationOptions: {
@@ -53,7 +68,8 @@ const MainStack = createBottomTabNavigator({
       ),
     },
   },
-  Event: {
+  // events tab navigator to events screen
+  Events: {
     screen: Events,
     navigationOptions: {
       tabBarlabel: 'Events',
@@ -64,6 +80,8 @@ const MainStack = createBottomTabNavigator({
   },
 },
 {
+  // initial route set to home for tab navigator
+  // provide styling for bottom nav bar
   initialRouteName: 'Home',
   tabBarOptions: {
     activeTintColor: 'white',
@@ -73,13 +91,14 @@ const MainStack = createBottomTabNavigator({
     },
   },
 });
-
+// master navigator for the app, between loginscreen and homescreen
 export default createSwitchNavigator(
   {
     MainStack,
     Login,
   },
   {
+    // app initially set to start at login screen
     initialRouteName: 'Login',
   },
 );

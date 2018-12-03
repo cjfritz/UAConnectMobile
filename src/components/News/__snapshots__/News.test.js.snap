@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<News /> renders with default props 1`] = `
+<Styled(Container)>
+  <Component
+    style={
+      Object {
+        "backgroundColor": "darkred",
+        "flexDirection": "row",
+        "height": "12%",
+        "width": "100%",
+      }
+    }
+  >
+    <Styled(Button)
+      disabled={true}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignSelf": "center",
+          "flex": 1,
+          "resizeMode": "cover",
+        }
+      }
+      transparent={true}
+    >
+      <Styled(Icon)
+        name="arrow-back"
+      />
+    </Styled(Button)>
+  </Component>
+  <WebView
+    onNavigationStateChange={[Function]}
+    originWhitelist={
+      Array [
+        "http://*",
+        "https://*",
+      ]
+    }
+    source={
+      Object {
+        "uri": "https://news.uark.edu",
+      }
+    }
+  />
+</Styled(Container)>
+`;

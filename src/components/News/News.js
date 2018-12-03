@@ -1,14 +1,44 @@
-import React, { Component } from 'react'; 
-import { WebView } from 'react-native';
-import { Button, View } from 'native-base';
+import React, { Component } from 'react';
+import { WebView, View } from 'react-native';
+import {
+  Container, Button, Icon,
+} from 'native-base';
+import styles from './News.style';
+
+const WEBREF = 'web_ref';
 
 class News extends Component {
+  constructor() {
+    super();
+    this.state = {
+      canGoBack: false,
+    };
+  }
+
+  // go back to previous page in webview
+  goBack = () => {
+    // use the ref to go back
+    // eslint-disable-next-line react/no-string-refs
+    this.refs[WEBREF].goBack();
+  };
+
   render() {
+    const { canGoBack } = this.state;
     return (
-      <WebView
-        source={ { uri: 'https://news.uark.edu' } }
-        style={ { marginTop: 20 } }
-      />
+      <Container>
+        <View style={ styles.headerView }>
+          <Button style={ styles.backButton } transparent disabled={ !canGoBack } onPress={ () => this.goBack() }>
+            <Icon name='arrow-back' />
+          </Button>
+        </View>
+        <WebView
+          source={ { uri: 'https://news.uark.edu' } }
+          ref={ WEBREF }
+          onNavigationStateChange={ navState => {
+            this.setState({ canGoBack: navState.canGoBack });
+          } }
+        />
+      </Container>
     );
   }
 }

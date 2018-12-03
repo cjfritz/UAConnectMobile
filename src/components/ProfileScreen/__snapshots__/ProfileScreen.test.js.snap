@@ -1,0 +1,470 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProfileScreen /> should render with complete fields 1`] = `
+<Styled(Container)>
+  <withNavigation(NavigationEvents)
+    onWillFocus={[Function]}
+  />
+  <Styled(Content)
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+      }
+    }
+  >
+    <LoadingModal
+      loadingLabel="Loading..."
+      visible={false}
+    />
+    <Component
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Card
+        containerStyle={
+          Object {
+            "backgroundColor": "darkred",
+            "borderWidth": 0,
+            "flex": 1,
+            "margin": 0,
+            "padding": 0,
+          }
+        }
+      >
+        <Component>
+          <ImageBackground
+            blurRadius={10}
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/ua_logo.png",
+              }
+            }
+            style={
+              Object {
+                "paddingBottom": 20,
+                "paddingTop": 35,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                }
+              }
+            >
+              <Component
+                source={
+                  Object {
+                    "testUri": "../../../src/assets/images/default_profile.jpg",
+                  }
+                }
+                style={
+                  Object {
+                    "backgroundColor": "white",
+                    "borderColor": "black",
+                    "borderRadius": 85,
+                    "borderWidth": 3,
+                    "height": 170,
+                    "marginBottom": 15,
+                    "width": 170,
+                  }
+                }
+              />
+              <Component
+                style={
+                  Object {
+                    "color": "#FFF",
+                    "fontSize": 22,
+                    "fontWeight": "bold",
+                    "paddingBottom": 8,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                someName
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <ColumnNB>
+                  <Component>
+                    <Icon
+                      color="black"
+                      iconStyle={
+                        Object {
+                          "color": "white",
+                          "fontSize": 26,
+                        }
+                      }
+                      name="place"
+                      raised={false}
+                      reverse={false}
+                      reverseColor="white"
+                      size={24}
+                      underlayColor="transparent"
+                    />
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "paddingBottom": "2%",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "600",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      someAddress
+                    </Component>
+                  </Component>
+                  <Styled(Button)
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "backgroundColor": "white",
+                      }
+                    }
+                  >
+                    <Component>
+                      Save Changes
+                    </Component>
+                  </Styled(Button)>
+                </ColumnNB>
+              </Component>
+            </Component>
+          </ImageBackground>
+        </Component>
+      </Card>
+      <Card>
+        <Styled(Item)
+          floatingLabel={true}
+        >
+          <Styled(Label)>
+            Name
+          </Styled(Label)>
+          <Styled(Input)
+            keyboardType="default"
+            onChangeText={[Function]}
+            value="someName"
+          />
+        </Styled(Item)>
+      </Card>
+      <Card>
+        <Styled(Item)
+          floatingLabel={true}
+        >
+          <Styled(Label)>
+            Address
+          </Styled(Label)>
+          <Styled(Input)
+            keyboardType="default"
+            onChangeText={[Function]}
+            value="someAddress"
+          />
+        </Styled(Item)>
+      </Card>
+      <Card>
+        <Styled(Item)
+          floatingLabel={true}
+        >
+          <Styled(Label)>
+            Phone
+          </Styled(Label)>
+          <Styled(Input)
+            keyboardType="phone-pad"
+            onChangeText={[Function]}
+            value="somePhone"
+          />
+        </Styled(Item)>
+      </Card>
+      <Card>
+        <Styled(Item)
+          floatingLabel={true}
+        >
+          <Styled(Label)>
+            Standing
+          </Styled(Label)>
+          <Styled(Input)
+            keyboardType="default"
+            onChangeText={[Function]}
+            value="someStanding"
+          />
+        </Styled(Item)>
+      </Card>
+      <Card
+        style={
+          Object {
+            "marginBottom": "5%",
+          }
+        }
+      >
+        <Styled(Item)
+          floatingLabel={true}
+        >
+          <Styled(Label)>
+            Expected Graduation
+          </Styled(Label)>
+          <Styled(Input)
+            keyboardType="default"
+            onChangeText={[Function]}
+            value="someGraduation"
+          />
+        </Styled(Item)>
+      </Card>
+    </Component>
+  </Styled(Content)>
+</Styled(Container)>
+`;
+
+exports[`<ProfileScreen /> should render with empty fields 1`] = `
+<Styled(Container)>
+  <withNavigation(NavigationEvents)
+    onWillFocus={[Function]}
+  />
+  <Styled(Content)
+    style={
+      Object {
+        "backgroundColor": "#FFF",
+      }
+    }
+  >
+    <LoadingModal
+      loadingLabel="Loading..."
+      visible={false}
+    />
+    <Component
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Card
+        containerStyle={
+          Object {
+            "backgroundColor": "darkred",
+            "borderWidth": 0,
+            "flex": 1,
+            "margin": 0,
+            "padding": 0,
+          }
+        }
+      >
+        <Component>
+          <ImageBackground
+            blurRadius={10}
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/ua_logo.png",
+              }
+            }
+            style={
+              Object {
+                "paddingBottom": 20,
+                "paddingTop": 35,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                }
+              }
+            >
+              <Component
+                source={
+                  Object {
+                    "testUri": "../../../src/assets/images/default_profile.jpg",
+                  }
+                }
+                style={
+                  Object {
+                    "backgroundColor": "white",
+                    "borderColor": "black",
+                    "borderRadius": 85,
+                    "borderWidth": 3,
+                    "height": 170,
+                    "marginBottom": 15,
+                    "width": 170,
+                  }
+                }
+              />
+              <Component
+                style={
+                  Object {
+                    "color": "#FFF",
+                    "fontSize": 22,
+                    "fontWeight": "bold",
+                    "paddingBottom": 8,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                  }
+                }
+              >
+                <ColumnNB>
+                  <Component>
+                    <Icon
+                      color="black"
+                      iconStyle={
+                        Object {
+                          "color": "white",
+                          "fontSize": 26,
+                        }
+                      }
+                      name="place"
+                      raised={false}
+                      reverse={false}
+                      reverseColor="white"
+                      size={24}
+                      underlayColor="transparent"
+                    />
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "backgroundColor": "transparent",
+                        "paddingBottom": "2%",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "white",
+                          "fontSize": 15,
+                          "fontWeight": "600",
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      
+                    </Component>
+                  </Component>
+                  <Styled(Button)
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignSelf": "center",
+                        "backgroundColor": "white",
+                      }
+                    }
+                  >
+                    <Component>
+                      Save Changes
+                    </Component>
+                  </Styled(Button)>
+                </ColumnNB>
+              </Component>
+            </Component>
+          </ImageBackground>
+        </Component>
+      </Card>
+      <Card>
+        <Styled(Item)
+          floatingLabel={true}
+        >
+          <Styled(Label)>
+            Name
+          </Styled(Label)>
+          <Styled(Input)
+            keyboardType="default"
+            onChangeText={[Function]}
+            value=""
+          />
+        </Styled(Item)>
+      </Card>
+      <Card>
+        <Styled(Item)
+          floatingLabel={true}
+        >
+          <Styled(Label)>
+            Address
+          </Styled(Label)>
+          <Styled(Input)
+            keyboardType="default"
+            onChangeText={[Function]}
+            value=""
+          />
+        </Styled(Item)>
+      </Card>
+      <Card>
+        <Styled(Item)
+          floatingLabel={true}
+        >
+          <Styled(Label)>
+            Phone
+          </Styled(Label)>
+          <Styled(Input)
+            keyboardType="phone-pad"
+            onChangeText={[Function]}
+            value=""
+          />
+        </Styled(Item)>
+      </Card>
+      <Card>
+        <Styled(Item)
+          floatingLabel={true}
+        >
+          <Styled(Label)>
+            Standing
+          </Styled(Label)>
+          <Styled(Input)
+            keyboardType="default"
+            onChangeText={[Function]}
+            value=""
+          />
+        </Styled(Item)>
+      </Card>
+      <Card
+        style={
+          Object {
+            "marginBottom": "5%",
+          }
+        }
+      >
+        <Styled(Item)
+          floatingLabel={true}
+        >
+          <Styled(Label)>
+            Expected Graduation
+          </Styled(Label)>
+          <Styled(Input)
+            keyboardType="default"
+            onChangeText={[Function]}
+          />
+        </Styled(Item)>
+      </Card>
+    </Component>
+  </Styled(Content)>
+</Styled(Container)>
+`;
