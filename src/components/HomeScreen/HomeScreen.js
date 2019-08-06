@@ -20,9 +20,9 @@ export class HomeScreen extends Component {
       <View style={ styles.Container }>
         <LoadingModal visible={ loading } loadingLabel='Logging out...' />
         <Header style={ styles.logout }>
-          <Right style={ styles.logoutBody }>
-            <Button transparent onPress={ () => userLoggedOut() }>
-              <Text style={ styles.logoutText }> Log Out </Text>
+          <Right>
+            <Button block light onPress={ () => userLoggedOut() }>
+              <Text style={ styles.logoutText }>Log Out</Text>
             </Button>
           </Right>
         </Header>

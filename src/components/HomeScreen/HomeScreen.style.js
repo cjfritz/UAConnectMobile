@@ -18,30 +18,27 @@ export default StyleSheet.create({
     flex: 2,
     justifyContent: 'center',
   },
-  logout:
-  {
+  Row1: {
+    backgroundColor: '#67141A',
+    flex: 1,
+    flexDirection: 'row',
+  },
+  Row2: {
+    backgroundColor: '#67141A',
+    flex: 1,
+    flexDirection: 'row',
+  },
+  logout: {
     backgroundColor: 'darkred',
     color: 'black',
     fontSize: 60,
   },
   logoutText: {
-    color: 'white',
+    color: 'black',
     fontSize: 15,
-  },
-  Row1:
-  {
-    backgroundColor: '#67141A',
-    flex: 1,
-    flexDirection: 'row',
-  },
-  Row2:
-  {
-    backgroundColor: '#67141A',
-    flex: 1,
-    flexDirection: 'row',
   },
   uaconnect: {
     color: 'white',
     fontSize: 60,
-  }, 
+  },
 });
