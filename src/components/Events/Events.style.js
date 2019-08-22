@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  backButton: {
-    marginTop: '6%',
-  },
-  headerView: {
+  header: {
     backgroundColor: 'darkred',
-    flexDirection: 'row',
-    height: '12%',
-    width: '100%',
+  },
+  headerSection: {
+    flex: 1,
+  },
+  title: {
+    alignSelf: 'center',
   },
 });
